@@ -26,11 +26,11 @@ public class DataInitializer {
             if (petRepository.count() == 0) {
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                 List<Pet> pets = List.of(
-                        new Pet("Firulais", sdf.parse("2020-03-01"), PetType.PERRO, "Carlos"),
-                        new Pet("Michi", sdf.parse("2019-06-15"), PetType.GATO, "Laura"),
-                        new Pet("Pelusa", sdf.parse("2021-01-10"), PetType.CONEJO, "Pedro"),
-                        new Pet("Dori", sdf.parse("2022-12-05"), PetType.PEZ, "Ana"),
-                        new Pet("Piolín", sdf.parse("2023-05-20"), PetType.AVE, "Luis"));
+                        new Pet("Cachu", sdf.parse("2020-03-01"), PetType.PERRO, "Ariel"),
+                        new Pet("Michi", sdf.parse("2019-06-15"), PetType.GATO, "Sofy"),
+                        new Pet("Esquilax", sdf.parse("2021-01-10"), PetType.CONEJO, "Bart"),
+                        new Pet("Dori", sdf.parse("2022-12-05"), PetType.PEZ, "Josefa"),
+                        new Pet("Mimi", sdf.parse("2023-05-20"), PetType.AVE, "Sergio"));
 
                 petRepository.saveAll(pets);
                 System.out.println("✔️ Mascotas inicializadas correctamente.");
