@@ -17,14 +17,15 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
-
+import org.springframework.hateoas.RepresentationModel;
+ 
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @Entity
 @Table(name = "events")
-public class Event {
+public class Event extends RepresentationModel<Event>{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

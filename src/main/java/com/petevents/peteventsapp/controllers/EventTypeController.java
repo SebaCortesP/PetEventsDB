@@ -6,6 +6,8 @@ import com.petevents.peteventsapp.services.EventTypeService;
 import jakarta.validation.Valid;
 
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.hateoas.CollectionModel;
+import org.springframework.hateoas.EntityModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -21,6 +23,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import org.springframework.hateoas.CollectionModel;
+import org.springframework.hateoas.EntityModel;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
 @RestController
 public class EventTypeController {
@@ -29,10 +34,21 @@ public class EventTypeController {
     public EventTypeController(EventTypeService eventTypeService) {
         this.eventTypeService = eventTypeService;
     }
-
+    
     @GetMapping("/event_type")
-    public List<EventType> getAllEvents() {
-        return eventTypeService.getAllEvents();
+    public ResponseEntity<CollectionModel<EntityModel<EventType>>> getAllEvents() {
+        List<EventType> events = eventTypeService.getAllEvents();
+
+        List<EntityModel<EventType>> eventResources = events.stream()
+                .map(event -> EntityModel.of(event,
+                        linkTo(methodOn(EventTypeController.class).getEventById(event.getId())).withSelfRel(),
+                        linkTo(methodOn(EventTypeController.class).getAllEvents()).withRel("all-event-types")))
+                .toList();
+
+        CollectionModel<EntityModel<EventType>> collection = CollectionModel.of(eventResources,
+                linkTo(methodOn(EventTypeController.class).getAllEvents()).withSelfRel());
+
+        return ResponseEntity.ok(collection);
     }
 
     @GetMapping("/event_type/{id}")
@@ -40,7 +56,11 @@ public class EventTypeController {
         Optional<EventType> eventType = eventTypeService.getEventById(id);
 
         if (eventType.isPresent()) {
-            return ResponseEntity.ok(eventType.get());
+            EntityModel<EventType> resource = EntityModel.of(eventType.get(),
+                    linkTo(methodOn(EventTypeController.class).getEventById(id)).withSelfRel(),
+                    linkTo(methodOn(EventTypeController.class).getAllEvents()).withRel("all-event-types"));
+
+            return ResponseEntity.ok(resource);
         } else {
             return ResponseEntity.status(404).body("Event Type with ID " + id + " not found");
         }
@@ -53,9 +73,20 @@ public class EventTypeController {
             result.getFieldErrors().forEach(error -> errors.put(error.getField(), error.getDefaultMessage()));
             return ResponseEntity.badRequest().body(errors);
         }
+
         try {
             Optional<EventType> saved = eventTypeService.storeEventType(eventType);
-            return ResponseEntity.ok(saved);
+
+            if (saved.isPresent()) {
+                EntityModel<EventType> resource = EntityModel.of(saved.get(),
+                        linkTo(methodOn(EventTypeController.class).getEventById(saved.get().getId())).withSelfRel(),
+                        linkTo(methodOn(EventTypeController.class).getAllEvents()).withRel("all-event-types"));
+
+                return ResponseEntity.ok(resource);
+            } else {
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error storing EventType");
+            }
+
         } catch (DataIntegrityViolationException ex) {
             Map<String, String> errorDetails = new HashMap<>();
             errorDetails.put("error", "Error de datos");
@@ -65,7 +96,8 @@ public class EventTypeController {
     }
 
     @PutMapping("/event_type/update/{id}")
-    public ResponseEntity<?> updateEventType(@PathVariable("id") Long id, @RequestBody @Valid EventType event, BindingResult result) {
+    public ResponseEntity<?> updateEventType(@PathVariable("id") Long id, @RequestBody @Valid EventType event,
+            BindingResult result) {
         if (result.hasErrors()) {
             Map<String, String> errors = new HashMap<>();
             result.getFieldErrors().forEach(error -> errors.put(error.getField(), error.getDefaultMessage()));
@@ -76,10 +108,15 @@ public class EventTypeController {
             Optional<EventType> updated = eventTypeService.updateEvent(id, event);
 
             if (updated.isPresent()) {
-                return ResponseEntity.ok(updated.get());
+                EntityModel<EventType> resource = EntityModel.of(updated.get(),
+                        linkTo(methodOn(EventTypeController.class).getEventById(id)).withSelfRel(),
+                        linkTo(methodOn(EventTypeController.class).getAllEvents()).withRel("all-event-types"));
+
+                return ResponseEntity.ok(resource);
             } else {
                 return ResponseEntity.status(404).body("No se encontró el tipo de evento con ID " + id);
             }
+
         } catch (DataIntegrityViolationException ex) {
             Map<String, String> errorDetails = new HashMap<>();
             errorDetails.put("error", "Error de datos");

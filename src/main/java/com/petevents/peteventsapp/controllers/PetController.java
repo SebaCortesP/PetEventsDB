@@ -6,6 +6,8 @@ import com.petevents.peteventsapp.services.PetService;
 import jakarta.validation.Valid;
 
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.hateoas.CollectionModel;
+import org.springframework.hateoas.EntityModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -20,6 +22,9 @@ import java.util.Optional;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.springframework.hateoas.CollectionModel;
+import org.springframework.hateoas.EntityModel;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
 @RestController
 public class PetController {
@@ -30,8 +35,19 @@ public class PetController {
     }
 
     @GetMapping("/pets")
-    public List<Pet> getAllPets() {
-        return petService.getAllPets();
+    public ResponseEntity<CollectionModel<EntityModel<Pet>>> getAllPets() {
+        List<Pet> pets = petService.getAllPets();
+
+        List<EntityModel<Pet>> petResources = pets.stream()
+                .map(pet -> EntityModel.of(pet,
+                        linkTo(methodOn(PetController.class).getPetById(pet.getId())).withSelfRel(),
+                        linkTo(methodOn(PetController.class).getAllPets()).withRel("all-pets")))
+                .toList();
+
+        CollectionModel<EntityModel<Pet>> collection = CollectionModel.of(petResources,
+                linkTo(methodOn(PetController.class).getAllPets()).withSelfRel());
+
+        return ResponseEntity.ok(collection);
     }
 
     @GetMapping("/pets/{id}")
@@ -39,7 +55,11 @@ public class PetController {
         Optional<Pet> pet = petService.getPetById(id);
 
         if (pet.isPresent()) {
-            return ResponseEntity.ok(pet.get());
+            EntityModel<Pet> petResource = EntityModel.of(pet.get(),
+                    linkTo(methodOn(PetController.class).getPetById(id)).withSelfRel(),
+                    linkTo(methodOn(PetController.class).getAllPets()).withRel("all-pets"));
+
+            return ResponseEntity.ok(petResource);
         } else {
             return ResponseEntity.status(404).body("Pet with ID " + id + " not found");
         }
@@ -52,9 +72,16 @@ public class PetController {
             result.getFieldErrors().forEach(error -> errors.put(error.getField(), error.getDefaultMessage()));
             return ResponseEntity.badRequest().body(errors);
         }
+
         try {
-            Optional<Pet> savedPet = Optional.ofNullable(petService.storePet(pet));
-            return ResponseEntity.ok(savedPet);
+            Pet savedPet = petService.storePet(pet);
+
+            EntityModel<Pet> resource = EntityModel.of(savedPet,
+                    linkTo(methodOn(PetController.class).getPetById(savedPet.getId())).withSelfRel(),
+                    linkTo(methodOn(PetController.class).getAllPets()).withRel("all-pets"));
+
+            return ResponseEntity.created(linkTo(methodOn(PetController.class).getPetById(savedPet.getId())).toUri())
+                    .body(resource);
         } catch (DataIntegrityViolationException ex) {
             Map<String, String> errorDetails = new HashMap<>();
             errorDetails.put("error", "Error de datos");
@@ -65,28 +92,34 @@ public class PetController {
 
     @PutMapping("/pets/update/{id}")
     public ResponseEntity<?> updatePet(@PathVariable("id") Long id, @RequestBody @Valid Pet pet, BindingResult result) {
-        // Validación de errores en el cuerpo de la solicitud
         if (result.hasErrors()) {
             Map<String, String> errors = new HashMap<>();
             result.getFieldErrors().forEach(error ->
-                errors.put(error.getField(), error.getDefaultMessage())
+                    errors.put(error.getField(), error.getDefaultMessage())
             );
             return ResponseEntity.badRequest().body(errors);
-        }    
+        }
+    
         try {
-            Optional<Pet> updatedPet = petService.updatePet(id, pet);            
+            Optional<Pet> updatedPet = petService.updatePet(id, pet);
+    
             if (updatedPet.isPresent()) {
-                return ResponseEntity.ok(updatedPet.get());
+                EntityModel<Pet> resource = EntityModel.of(updatedPet.get(),
+                        linkTo(methodOn(PetController.class).getPetById(id)).withSelfRel(),
+                        linkTo(methodOn(PetController.class).getAllPets()).withRel("all-pets"));
+    
+                return ResponseEntity.ok(resource);
             } else {
                 return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Pet with ID " + id + " not found");
-            }    
+            }
+    
         } catch (DataIntegrityViolationException ex) {
             Map<String, String> errorDetails = new HashMap<>();
             errorDetails.put("error", "Error de datos");
             errorDetails.put("message", "Uno o más campos obligatorios están vacíos o contienen valores no válidos.");
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorDetails);
         }
-    }    
+    }
 
     @DeleteMapping("/pets/delete/{id}")
     public ResponseEntity<?> deletePet(@PathVariable("id") Long id) {

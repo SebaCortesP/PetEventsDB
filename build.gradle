@@ -25,6 +25,7 @@ repositories {
 
 dependencies {
 	implementation "org.springframework.boot:spring-boot-starter-data-jpa"
+	implementation 'org.springframework.hateoas:spring-hateoas:2.2.0'
 	implementation 'com.oracle.database.security:osdt_core:19.8.0.0'
 	implementation 'com.oracle.database.security:osdt_cert:19.8.0.0'
 	implementation 'com.oracle.database.security:oraclepki:19.8.0.0' 
@@ -38,6 +39,7 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 

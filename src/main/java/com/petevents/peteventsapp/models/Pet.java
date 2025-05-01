@@ -2,6 +2,8 @@ package com.petevents.peteventsapp.models;
 
 import java.util.Date;
 
+import org.springframework.hateoas.RepresentationModel;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.Column;
@@ -27,7 +29,7 @@ import lombok.AllArgsConstructor;
 @Setter
 @Entity
 @Table(name = "pets")
-public class Pet {
+public class Pet extends RepresentationModel<Pet>{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

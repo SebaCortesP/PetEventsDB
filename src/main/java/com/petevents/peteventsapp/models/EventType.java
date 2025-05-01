@@ -4,6 +4,9 @@ import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+
+import org.springframework.hateoas.RepresentationModel;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -18,7 +21,7 @@ import jakarta.validation.constraints.NotBlank;
 @Setter
 @Getter
 @Table(name = "event_type")
-public class EventType {
+public class EventType extends RepresentationModel<EventType>{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
