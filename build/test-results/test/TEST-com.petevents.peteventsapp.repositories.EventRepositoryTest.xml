@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.petevents.peteventsapp.repositories.EventRepositoryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-05-01T21:14:08.518Z" hostname="SCORTES" time="60.849">
+  <properties/>
+  <testcase name="getEventByIdTest()" classname="com.petevents.peteventsapp.repositories.EventRepositoryTest" time="60.759"/>
+  <testcase name="storeEventTest()" classname="com.petevents.peteventsapp.repositories.EventRepositoryTest" time="0.041"/>
+  <testcase name="deleteEventTest()" classname="com.petevents.peteventsapp.repositories.EventRepositoryTest" time="0.046"/>
+  <system-out><![CDATA[2025-05-01T17:13:22.202-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] b.t.a.o.j.DataJpaTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [EventRepositoryTest]: using SpringBootContextLoader
+2025-05-01T17:13:22.203-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.petevents.peteventsapp.repositories.EventRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2025-05-01T17:13:22.204-04:00  INFO 15316 --- [peteventsapp] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.petevents.peteventsapp.repositories.EventRepositoryTest]: EventRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-05-01T17:13:22.206-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] b.t.a.o.j.DataJpaTestContextBootstrapper : Using ContextCustomizerFactory implementations for test class [EventRepositoryTest]: [OnFailureConditionReportContextCustomizerFactory, OverrideAutoConfigurationContextCustomizerFactory, ObservabilityContextCustomizerFactory, TypeExcludeFiltersContextCustomizerFactory, PropertyMappingContextCustomizerFactory, WebDriverContextCustomizerFactory, ImportsContextCustomizerFactory, ExcludeFilterContextCustomizerFactory, HttpGraphQlTesterContextCustomizerFactory, DuplicateJsonObjectContextCustomizerFactory, MockitoContextCustomizerFactory, TestRestTemplateContextCustomizerFactory, WebTestClientContextCustomizerFactory, DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory, BeanOverrideContextCustomizerFactory, MockServerContainerContextCustomizerFactory, DynamicPropertiesContextCustomizerFactory]
+2025-05-01T17:13:22.249-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] b.t.a.o.j.DataJpaTestContextBootstrapper : Using ContextCustomizers for test class [EventRepositoryTest]: [OnFailureConditionReportContextCustomizer, DisableAutoConfigurationContextCustomizer, DisableObservabilityContextCustomizer, TypeExcludeFiltersContextCustomizer, PropertyMappingContextCustomizer, WebDriverContextCustomizer, ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer, DynamicPropertiesContextCustomizer]
+2025-05-01T17:13:22.293-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] ssPathScanningCandidateComponentProvider : Identified candidate component class: file [C:\Users\sebas\DuocUC\Full Stack\Semana 8\PetEventsDBTests\build\classes\java\main\com\petevents\peteventsapp\PeteventsappApplication.class]
+2025-05-01T17:13:22.293-04:00  INFO 15316 --- [peteventsapp] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.petevents.peteventsapp.PeteventsappApplication for test class com.petevents.peteventsapp.repositories.EventRepositoryTest
+2025-05-01T17:13:22.297-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] .s.t.c.u.TestContextSpringFactoriesUtils : Skipping candidate TestExecutionListener [org.springframework.test.context.observation.MicrometerObservationRegistryTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: io.micrometer.context.ThreadLocalAccessor. MicrometerObservationRegistryTestExecutionListener requires io.micrometer:micrometer-observation:1.10.8 or higher and io.micrometer:context-propagation:1.0.3 or higher.
+2025-05-01T17:13:22.298-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] b.t.a.o.j.DataJpaTestContextBootstrapper : Using TestExecutionListeners for test class [EventRepositoryTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, BeanOverrideTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, CommonCachesTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, WithSecurityContextTestExecutionListener, EventPublishingTestExecutionListener, ReactorContextTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener, MockitoResetTestExecutionListener]
+2025-05-01T17:13:22.299-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] sContextBeforeModesTestExecutionListener : Before test class: class [EventRepositoryTest], class annotated with @DirtiesContext [false] with mode [null]
+2025-05-01T17:13:22.301-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] DependencyInjectionTestExecutionListener : Performing dependency injection for test class com.petevents.peteventsapp.repositories.EventRepositoryTest
+2025-05-01T17:13:22.354-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.boot.ApplicationEnvironment          : Activating profiles []
+2025-05-01T17:13:22.358-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'spring.application.name' in PropertySource 'configurationProperties' with value of type String
+2025-05-01T17:13:22.361-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'logging.logback.rollingpolicy.max-file-size' in PropertySource 'configurationProperties' with value of type String
+2025-05-01T17:13:22.363-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'logging.logback.rollingpolicy.max-history' in PropertySource 'configurationProperties' with value of type String
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.4)
+
+2025-05-01T17:13:22.385-04:00  INFO 15316 --- [peteventsapp] [    Test worker] c.p.p.repositories.EventRepositoryTest   : Starting EventRepositoryTest using Java 21.0.6 with PID 15316 (started by sebas in C:\Users\sebas\DuocUC\Full Stack\Semana 8\PetEventsDBTests)
+2025-05-01T17:13:22.385-04:00  INFO 15316 --- [peteventsapp] [    Test worker] c.p.p.repositories.EventRepositoryTest   : No active profile set, falling back to 1 default profile: "default"
+2025-05-01T17:13:22.385-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.boot.SpringApplication               : Loading source class com.petevents.peteventsapp.PeteventsappApplication
+2025-05-01T17:13:22.389-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@2ffcdc9b
+2025-05-01T17:13:22.390-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2025-05-01T17:13:22.391-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+2025-05-01T17:13:22.923-04:00  INFO 15316 --- [peteventsapp] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-01T17:13:22.926-04:00  INFO 15316 --- [peteventsapp] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-01T17:13:22.941-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.AutoConfigurationPackages'
+2025-05-01T17:13:22.942-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.petevents.peteventsapp'. Automatic @Repository and @Entity scanning is enabled.
+2025-05-01T17:13:22.942-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Scanning for JPA repositories in packages com.petevents.peteventsapp.
+2025-05-01T17:13:22.960-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [C:\Users\sebas\DuocUC\Full Stack\Semana 8\PetEventsDBTests\build\classes\java\main\com\petevents\peteventsapp\repositories\EventRepository.class]
+2025-05-01T17:13:22.960-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [C:\Users\sebas\DuocUC\Full Stack\Semana 8\PetEventsDBTests\build\classes\java\main\com\petevents\peteventsapp\repositories\EventTypeRepository.class]
+2025-05-01T17:13:22.961-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [C:\Users\sebas\DuocUC\Full Stack\Semana 8\PetEventsDBTests\build\classes\java\main\com\petevents\peteventsapp\repositories\PetRepository.class]
+2025-05-01T17:13:23.035-04:00  INFO 15316 --- [peteventsapp] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 3 JPA repository interfaces.
+2025-05-01T17:13:23.110-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.context.ImportsContextCustomizer$ImportsCleanupPostProcessor'
+2025-05-01T17:13:23.110-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor'
+2025-05-01T17:13:23.113-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'emBeanDefinitionRegistrarPostProcessor'
+2025-05-01T17:13:23.115-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor'
+2025-05-01T17:13:23.156-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+2025-05-01T17:13:23.156-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+2025-05-01T17:13:23.156-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory'
+2025-05-01T17:13:23.157-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2025-05-01T17:13:23.159-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2025-05-01T17:13:23.160-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2025-05-01T17:13:23.160-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor$SpyPostProcessor'
+2025-05-01T17:13:23.160-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jdbcConnectionDetailsHikariBeanPostProcessor'
+2025-05-01T17:13:23.161-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor'
+2025-05-01T17:13:23.162-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.internalConfigurationPropertiesBinder'
+2025-05-01T17:13:23.164-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2025-05-01T17:13:23.171-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.test.context.support.internalDynamicPropertyRegistrarBeanInitializer'
+2025-05-01T17:13:23.172-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2025-05-01T17:13:23.172-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+2025-05-01T17:13:23.197-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'transactionAttributeSource'
+2025-05-01T17:13:23.201-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'transactionInterceptor'
+2025-05-01T17:13:23.203-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'transactionInterceptor' via factory method to bean named 'transactionAttributeSource'
+2025-05-01T17:13:23.211-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.transaction.config.internalTransactionAdvisor' via factory method to bean named 'transactionAttributeSource'
+2025-05-01T17:13:23.213-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.transaction.config.internalTransactionAdvisor' via factory method to bean named 'transactionInterceptor'
+2025-05-01T17:13:23.221-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'dataSourceScriptDatabaseInitializer'
+2025-05-01T17:13:23.221-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.sql.init.DataSourceInitializationConfiguration'
+2025-05-01T17:13:23.223-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'dataSource'
+2025-05-01T17:13:23.223-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari'
+2025-05-01T17:13:23.225-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties'
+2025-05-01T17:13:23.226-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.properties.BoundConfigurationProperties'
+2025-05-01T17:13:23.245-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jdbcConnectionDetails'
+2025-05-01T17:13:23.246-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceConfiguration'
+2025-05-01T17:13:23.248-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jdbcConnectionDetails' via factory method to bean named 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties'
+2025-05-01T17:13:23.252-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'dataSource' via factory method to bean named 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties'
+2025-05-01T17:13:23.252-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'dataSource' via factory method to bean named 'jdbcConnectionDetails'
+2025-05-01T17:13:23.546-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.sql.init-org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties'
+2025-05-01T17:13:23.552-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'dataSourceScriptDatabaseInitializer' via factory method to bean named 'dataSource'
+2025-05-01T17:13:23.552-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'dataSourceScriptDatabaseInitializer' via factory method to bean named 'spring.sql.init-org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties'
+2025-05-01T17:13:23.570-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'entityManagerFactory'
+2025-05-01T17:13:23.571-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration'
+2025-05-01T17:13:23.572-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.jpa-org.springframework.boot.autoconfigure.orm.jpa.JpaProperties'
+2025-05-01T17:13:23.577-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.jpa.hibernate-org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties'
+2025-05-01T17:13:23.582-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration' via constructor to bean named 'dataSource'
+2025-05-01T17:13:23.582-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration' via constructor to bean named 'spring.jpa-org.springframework.boot.autoconfigure.orm.jpa.JpaProperties'
+2025-05-01T17:13:23.582-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration' via constructor to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@7d07e04e'
+2025-05-01T17:13:23.582-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration' via constructor to bean named 'spring.jpa.hibernate-org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties'
+2025-05-01T17:13:23.592-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'hikariPoolDataSourceMetadataProvider'
+2025-05-01T17:13:23.592-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$HikariPoolDataSourceMetadataProviderConfiguration'
+2025-05-01T17:13:23.602-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'entityManagerFactoryBuilder'
+2025-05-01T17:13:23.604-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jpaVendorAdapter'
+2025-05-01T17:13:23.650-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'entityManagerFactoryBuilder' via factory method to bean named 'jpaVendorAdapter'
+2025-05-01T17:13:23.654-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'persistenceManagedTypes'
+2025-05-01T17:13:23.656-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'persistenceManagedTypes' via factory method to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@7d07e04e'
+2025-05-01T17:13:23.656-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'persistenceManagedTypes' via factory method to bean named 'org.springframework.context.annotation.AnnotationConfigApplicationContext@2ffcdc9b'
+2025-05-01T17:13:23.683-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'entityManagerFactory' via factory method to bean named 'entityManagerFactoryBuilder'
+2025-05-01T17:13:23.683-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'entityManagerFactory' via factory method to bean named 'persistenceManagedTypes'
+2025-05-01T17:13:23.709-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2025-05-01T17:13:23.800-04:00  INFO 15316 --- [peteventsapp] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-01T17:13:23.960-04:00  INFO 15316 --- [peteventsapp] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-01T17:13:24.056-04:00  INFO 15316 --- [peteventsapp] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-01T17:13:24.299-04:00  INFO 15316 --- [peteventsapp] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-01T17:13:24.368-04:00  INFO 15316 --- [peteventsapp] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-01T17:13:24.374-04:00  WARN 15316 --- [peteventsapp] [    Test worker] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2025-05-01T17:14:06.489-04:00 ERROR 15316 --- [peteventsapp] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Error thrown while acquiring connection from data source
+
+java.sql.SQLRecoverableException: Error de E/S: Invalid Operation, NOT Connected
+	at oracle.jdbc.driver.T4CConnection.doSetNetworkTimeout(T4CConnection.java:7689) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
+	at oracle.jdbc.driver.PhysicalConnection.setNetworkTimeout(PhysicalConnection.java:9408) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:562) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.setupConnection(PoolBase.java:428) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:144) ~[spring-boot-test-3.4.4.jar:3.4.4]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:563) ~[spring-boot-test-3.4.4.jar:3.4.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:144) ~[spring-boot-test-3.4.4.jar:3.4.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:110) ~[spring-boot-test-3.4.4.jar:3.4.4]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:155) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:111) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:160) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$12(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$7(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$6(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$1(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) ~[na:na]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) ~[na:na]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92) ~[na:na]
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63) ~[na:na]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
+Caused by: oracle.net.ns.NetException: Invalid Operation, NOT Connected
+	at oracle.net.nt.TcpNTAdapter.setOption(TcpNTAdapter.java:344) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
+	at oracle.net.nt.TcpsNTAdapter.setOption(TcpsNTAdapter.java:423) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
+	at oracle.net.ns.NSProtocol.setOption(NSProtocol.java:501) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
+	at oracle.net.ns.NSProtocol.setSocketReadTimeout(NSProtocol.java:748) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
+	at oracle.jdbc.driver.T4CConnection.doSetNetworkTimeout(T4CConnection.java:7686) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
+	... 139 common frames omitted
+
+2025-05-01T17:14:06.499-04:00  WARN 15316 --- [peteventsapp] [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 17002, SQLState: 08006
+2025-05-01T17:14:06.499-04:00 ERROR 15316 --- [peteventsapp] [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : Error de E/S: Invalid Operation, NOT Connected
+2025-05-01T17:14:06.501-04:00  WARN 15316 --- [peteventsapp] [    Test worker] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+org.hibernate.exception.JDBCConnectionException: unable to obtain isolated JDBC connection [Error de E/S: Invalid Operation, NOT Connected] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:144) ~[spring-boot-test-3.4.4.jar:3.4.4]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:563) ~[spring-boot-test-3.4.4.jar:3.4.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:144) ~[spring-boot-test-3.4.4.jar:3.4.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:110) ~[spring-boot-test-3.4.4.jar:3.4.4]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:155) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:111) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:160) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$12(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$7(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$6(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$1(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) ~[na:na]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) ~[na:na]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92) ~[na:na]
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63) ~[na:na]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
+Caused by: java.sql.SQLRecoverableException: Error de E/S: Invalid Operation, NOT Connected
+	at oracle.jdbc.driver.T4CConnection.doSetNetworkTimeout(T4CConnection.java:7689) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
+	at oracle.jdbc.driver.PhysicalConnection.setNetworkTimeout(PhysicalConnection.java:9408) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:562) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.setupConnection(PoolBase.java:428) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	... 127 common frames omitted
+Caused by: oracle.net.ns.NetException: Invalid Operation, NOT Connected
+	at oracle.net.nt.TcpNTAdapter.setOption(TcpNTAdapter.java:344) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
+	at oracle.net.nt.TcpsNTAdapter.setOption(TcpsNTAdapter.java:423) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
+	at oracle.net.ns.NSProtocol.setOption(NSProtocol.java:501) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
+	at oracle.net.ns.NSProtocol.setSocketReadTimeout(NSProtocol.java:748) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
+	at oracle.jdbc.driver.T4CConnection.doSetNetworkTimeout(T4CConnection.java:7686) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
+	... 139 common frames omitted
+
+2025-05-01T17:14:06.564-04:00  WARN 15316 --- [peteventsapp] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-01T17:14:06.588-04:00  INFO 15316 --- [peteventsapp] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (null)']
+	Database driver: undefined/unknown
+	Database version: 19.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-01T17:14:07.980-04:00  INFO 15316 --- [peteventsapp] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-01T17:14:07.985-04:00  INFO 15316 --- [peteventsapp] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-01T17:14:07.990-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'peteventsappApplication'
+2025-05-01T17:14:07.990-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration'
+2025-05-01T17:14:07.994-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration'
+2025-05-01T17:14:07.995-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration'
+2025-05-01T17:14:07.996-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter'
+2025-05-01T17:14:07.998-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$PersistenceManagedTypesConfiguration'
+2025-05-01T17:14:07.998-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'transactionManager'
+2025-05-01T17:14:08.010-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration'
+2025-05-01T17:14:08.011-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration'
+2025-05-01T17:14:08.012-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jpaSharedEM_entityManagerFactory'
+2025-05-01T17:14:08.053-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.data.jpa.util.JpaMetamodelCacheCleanup'
+2025-05-01T17:14:08.053-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.data.jpa.repository.support.JpaEvaluationContextExtension'
+2025-05-01T17:14:08.057-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jpa.named-queries#0'
+2025-05-01T17:14:08.061-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jpa.PetRepository.fragments#0'
+2025-05-01T17:14:08.063-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'petRepository'
+2025-05-01T17:14:08.081-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jpaMappingContext'
+2025-05-01T17:14:08.081-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] .c.JpaMetamodelMappingContextFactoryBean : Initializing JpaMetamodelMappingContext…
+2025-05-01T17:14:08.112-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] .c.JpaMetamodelMappingContextFactoryBean : Finished initializing JpaMetamodelMappingContext
+2025-05-01T17:14:08.150-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2025-05-01T17:14:08.226-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2025-05-01T17:14:08.336-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.petevents.peteventsapp.repositories.PetRepository…
+2025-05-01T17:14:08.367-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2025-05-01T17:14:08.410-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.petevents.peteventsapp.repositories.PetRepository.
+2025-05-01T17:14:08.413-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jpa.named-queries#1'
+2025-05-01T17:14:08.415-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jpa.EventRepository.fragments#0'
+2025-05-01T17:14:08.416-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'eventRepository'
+2025-05-01T17:14:08.418-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2025-05-01T17:14:08.433-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.petevents.peteventsapp.repositories.EventRepository…
+2025-05-01T17:14:08.434-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2025-05-01T17:14:08.441-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.petevents.peteventsapp.repositories.EventRepository.
+2025-05-01T17:14:08.442-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jpa.named-queries#2'
+2025-05-01T17:14:08.443-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jpa.EventTypeRepository.fragments#0'
+2025-05-01T17:14:08.445-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'eventTypeRepository'
+2025-05-01T17:14:08.449-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2025-05-01T17:14:08.449-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.petevents.peteventsapp.repositories.EventTypeRepository…
+2025-05-01T17:14:08.450-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2025-05-01T17:14:08.454-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.petevents.peteventsapp.repositories.EventTypeRepository.
+2025-05-01T17:14:08.456-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'data-jpa.repository-aot-processor#0'
+2025-05-01T17:14:08.463-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.JdbcTemplateConfiguration'
+2025-05-01T17:14:08.464-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jdbcTemplate'
+2025-05-01T17:14:08.465-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.jdbc-org.springframework.boot.autoconfigure.jdbc.JdbcProperties'
+2025-05-01T17:14:08.467-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jdbcTemplate' via factory method to bean named 'dataSource'
+2025-05-01T17:14:08.467-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jdbcTemplate' via factory method to bean named 'spring.jdbc-org.springframework.boot.autoconfigure.jdbc.JdbcProperties'
+2025-05-01T17:14:08.480-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.NamedParameterJdbcTemplateConfiguration'
+2025-05-01T17:14:08.480-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'namedParameterJdbcTemplate'
+2025-05-01T17:14:08.481-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'namedParameterJdbcTemplate' via factory method to bean named 'jdbcTemplate'
+2025-05-01T17:14:08.488-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration'
+2025-05-01T17:14:08.489-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.JdbcClientAutoConfiguration'
+2025-05-01T17:14:08.490-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jdbcClient'
+2025-05-01T17:14:08.490-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jdbcClient' via factory method to bean named 'namedParameterJdbcTemplate'
+2025-05-01T17:14:08.492-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration'
+2025-05-01T17:14:08.493-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration'
+2025-05-01T17:14:08.494-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration'
+2025-05-01T17:14:08.495-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$EnableTransactionManagementConfiguration$CglibAutoProxyConfiguration'
+2025-05-01T17:14:08.496-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$EnableTransactionManagementConfiguration'
+2025-05-01T17:14:08.497-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$TransactionTemplateConfiguration'
+2025-05-01T17:14:08.497-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'transactionTemplate'
+2025-05-01T17:14:08.498-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'transactionTemplate' via factory method to bean named 'transactionManager'
+2025-05-01T17:14:08.500-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration'
+2025-05-01T17:14:08.501-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration'
+2025-05-01T17:14:08.502-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'testEntityManager'
+2025-05-01T17:14:08.503-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'testEntityManager' via factory method to bean named 'entityManagerFactory'
+2025-05-01T17:14:08.508-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase -2147483647
+2025-05-01T17:14:08.508-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.c.support.DefaultLifecycleProcessor  : Successfully started bean 'springBootLoggingLifecycle'
+2025-05-01T17:14:08.510-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+
+============================
+CONDITIONS EVALUATION REPORT
+============================
+
+
+Positive matches:
+-----------------
+
+   DataSourceAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType' (OnClassCondition)
+      - @ConditionalOnMissingBean (types: io.r2dbc.spi.ConnectionFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataSourceAutoConfiguration.PooledDataSourceConfiguration matched:
+      - AnyNestedCondition 1 matched 1 did not; NestedCondition on DataSourceAutoConfiguration.PooledDataSourceCondition.PooledDataSourceAvailable PooledDataSource found supported DataSource; NestedCondition on DataSourceAutoConfiguration.PooledDataSourceCondition.ExplicitType @ConditionalOnProperty (spring.datasource.type) did not find property 'type' (DataSourceAutoConfiguration.PooledDataSourceCondition)
+      - @ConditionalOnMissingBean (types: javax.sql.DataSource,javax.sql.XADataSource; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataSourceAutoConfiguration.PooledDataSourceConfiguration#jdbcConnectionDetails matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.jdbc.JdbcConnectionDetails; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataSourceConfiguration.Hikari matched:
+      - @ConditionalOnClass found required class 'com.zaxxer.hikari.HikariDataSource' (OnClassCondition)
+      - @ConditionalOnProperty (spring.datasource.type=com.zaxxer.hikari.HikariDataSource) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: javax.sql.DataSource; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataSourceInitializationConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.jdbc.datasource.init.DatabasePopulator' (OnClassCondition)
+      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSource'; @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.sql.init.SqlDataSourceScriptDatabaseInitializer,org.springframework.boot.autoconfigure.sql.init.SqlR2dbcScriptDatabaseInitializer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataSourcePoolMetadataProvidersConfiguration.HikariPoolDataSourceMetadataProviderConfiguration matched:
+      - @ConditionalOnClass found required class 'com.zaxxer.hikari.HikariDataSource' (OnClassCondition)
+
+   DataSourceTransactionManagerAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.core.JdbcTemplate', 'org.springframework.transaction.TransactionManager' (OnClassCondition)
+
+   DataSourceTransactionManagerAutoConfiguration.JdbcTransactionManagerConfiguration matched:
+      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSource' (OnBeanCondition)
+
+   HibernateJpaAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean', 'jakarta.persistence.EntityManager', 'org.hibernate.engine.spi.SessionImplementor' (OnClassCondition)
+
+   HibernateJpaConfiguration matched:
+      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSource' (OnBeanCondition)
+
+   JdbcClientAutoConfiguration matched:
+      - @ConditionalOnSingleCandidate (types: org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate; SearchStrategy: all) found a single bean 'namedParameterJdbcTemplate'; @ConditionalOnMissingBean (types: org.springframework.jdbc.core.simple.JdbcClient; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JdbcTemplateAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.core.JdbcTemplate' (OnClassCondition)
+      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSource' (OnBeanCondition)
+
+   JdbcTemplateConfiguration matched:
+      - @ConditionalOnMissingBean (types: org.springframework.jdbc.core.JdbcOperations; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration#entityManagerFactory matched:
+      - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean,jakarta.persistence.EntityManagerFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration#entityManagerFactoryBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration#jpaVendorAdapter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.JpaVendorAdapter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration#transactionManager matched:
+      - @ConditionalOnMissingBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration.PersistenceManagedTypesConfiguration matched:
+      - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean,jakarta.persistence.EntityManagerFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration.PersistenceManagedTypesConfiguration#persistenceManagedTypes matched:
+      - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.persistenceunit.PersistenceManagedTypes; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaRepositoriesAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.data.jpa.repository.JpaRepository' (OnClassCondition)
+      - @ConditionalOnProperty (spring.data.jpa.repositories.enabled=true) matched (OnPropertyCondition)
+      - @ConditionalOnBean (types: javax.sql.DataSource; SearchStrategy: all) found bean 'dataSource'; @ConditionalOnMissingBean (types: org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean,org.springframework.data.jpa.repository.config.JpaRepositoryConfigExtension; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   NamedParameterJdbcTemplateConfiguration matched:
+      - @ConditionalOnSingleCandidate (types: org.springframework.jdbc.core.JdbcTemplate; SearchStrategy: all) found a single bean 'jdbcTemplate'; @ConditionalOnMissingBean (types: org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   NoOpCacheConfiguration matched:
+      - Cache org.springframework.boot.autoconfigure.cache.NoOpCacheConfiguration NONE cache type (CacheCondition)
+
+   SqlInitializationAutoConfiguration matched:
+      - @ConditionalOnProperty (spring.sql.init.enabled) matched (OnPropertyCondition)
+      - NoneNestedConditions 0 matched 1 did not; NestedCondition on SqlInitializationAutoConfiguration.SqlInitializationModeCondition.ModeIsNever @ConditionalOnProperty (spring.sql.init.mode=never) did not find property 'mode' (SqlInitializationAutoConfiguration.SqlInitializationModeCondition)
+
+   TestEntityManagerAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'jakarta.persistence.EntityManagerFactory' (OnClassCondition)
+
+   TestEntityManagerAutoConfiguration#testEntityManager matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TransactionAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.transaction.PlatformTransactionManager' (OnClassCondition)
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration matched:
+      - @ConditionalOnBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) found bean 'transactionManager'; @ConditionalOnMissingBean (types: org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration.CglibAutoProxyConfiguration matched:
+      - @ConditionalOnProperty (spring.aop.proxy-target-class=true) matched (OnPropertyCondition)
+
+   TransactionAutoConfiguration.TransactionTemplateConfiguration matched:
+      - @ConditionalOnSingleCandidate (types: org.springframework.transaction.PlatformTransactionManager; SearchStrategy: all) found a single bean 'transactionManager' (OnBeanCondition)
+
+   TransactionAutoConfiguration.TransactionTemplateConfiguration#transactionTemplate matched:
+      - @ConditionalOnMissingBean (types: org.springframework.transaction.support.TransactionOperations; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   Cache2kCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.cache2k.Cache2kBuilder' (OnClassCondition)
+
+   CacheAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.cache.interceptor.CacheAspectSupport; SearchStrategy: all) did not find any beans of type org.springframework.cache.interceptor.CacheAspectSupport (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.cache.CacheManager' (OnClassCondition)
+
+   CacheAutoConfiguration.CacheManagerEntityManagerFactoryDependsOnPostProcessor:
+      Did not match:
+         - Ancestor org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration did not match (ConditionEvaluationReport.AncestorsMatchedCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean' (OnClassCondition)
+
+   CaffeineCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.github.benmanes.caffeine.cache.Caffeine' (OnClassCondition)
+
+   CouchbaseCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
+
+   DataSourceAutoConfiguration.EmbeddedDatabaseConfiguration:
+      Did not match:
+         - EmbeddedDataSource spring.datasource.url is set (DataSourceAutoConfiguration.EmbeddedDatabaseCondition)
+
+   DataSourceCheckpointRestoreConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.crac.Resource' (OnClassCondition)
+
+   DataSourceConfiguration.Dbcp2:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.commons.dbcp2.BasicDataSource' (OnClassCondition)
+
+   DataSourceConfiguration.Generic:
+      Did not match:
+         - @ConditionalOnProperty (spring.datasource.type) did not find property 'spring.datasource.type' (OnPropertyCondition)
+
+   DataSourceConfiguration.OracleUcp:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'oracle.ucp.jdbc.PoolDataSourceImpl' (OnClassCondition)
+
+   DataSourceConfiguration.Tomcat:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.tomcat.jdbc.pool.DataSource' (OnClassCondition)
+
+   DataSourceJmxConfiguration:
+      Did not match:
+         - @ConditionalOnProperty (spring.jmx.enabled=true) found different value in property 'enabled' (OnPropertyCondition)
+
+   DataSourcePoolMetadataProvidersConfiguration.CommonsDbcp2PoolDataSourceMetadataProviderConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.commons.dbcp2.BasicDataSource' (OnClassCondition)
+
+   DataSourcePoolMetadataProvidersConfiguration.OracleUcpPoolDataSourceMetadataProviderConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'oracle.ucp.jdbc.PoolDataSource' (OnClassCondition)
+
+   DataSourcePoolMetadataProvidersConfiguration.TomcatDataSourcePoolMetadataProviderConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.tomcat.jdbc.pool.DataSource' (OnClassCondition)
+
+   DataSourceTransactionManagerAutoConfiguration.JdbcTransactionManagerConfiguration#transactionManager:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) found beans of type 'org.springframework.transaction.TransactionManager' transactionManager (OnBeanCondition)
+
+   FlywayAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.flywaydb.core.Flyway' (OnClassCondition)
+
+   GenericCacheConfiguration:
+      Did not match:
+         - Cache org.springframework.boot.autoconfigure.cache.GenericCacheConfiguration unknown cache type (CacheCondition)
+
+   HazelcastCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
+
+   InfinispanCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.infinispan.spring.embedded.provider.SpringEmbeddedCacheManager' (OnClassCondition)
+
+   JCacheCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.cache.Caching' (OnClassCondition)
+
+   JpaBaseConfiguration.JpaWebConfiguration:
+      Did not match:
+         - not a servlet web application (OnWebApplicationCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+
+   JpaRepositoriesAutoConfiguration#entityManagerFactoryBootstrapExecutorCustomizer:
+      Did not match:
+         - AnyNestedCondition 0 matched 2 did not; NestedCondition on JpaRepositoriesAutoConfiguration.BootstrapExecutorCondition.LazyBootstrapMode @ConditionalOnProperty (spring.data.jpa.repositories.bootstrap-mode=lazy) found different value in property 'bootstrap-mode'; NestedCondition on JpaRepositoriesAutoConfiguration.BootstrapExecutorCondition.DeferredBootstrapMode @ConditionalOnProperty (spring.data.jpa.repositories.bootstrap-mode=deferred) found different value in property 'bootstrap-mode' (JpaRepositoriesAutoConfiguration.BootstrapExecutorCondition)
+
+   LiquibaseAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'liquibase.change.DatabaseChange' (OnClassCondition)
+
+   R2dbcInitializationConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'io.r2dbc.spi.ConnectionFactory', 'org.springframework.r2dbc.connection.init.DatabasePopulator' (OnClassCondition)
+
+   RedisCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.connection.RedisConnectionFactory' (OnClassCondition)
+
+   SimpleCacheConfiguration:
+      Did not match:
+         - Cache org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration unknown cache type (CacheCondition)
+
+   TestDatabaseAutoConfiguration#dataSource:
+      Did not match:
+         - @ConditionalOnProperty (spring.test.database.replace=AUTO_CONFIGURED) found different value in property 'replace' (OnPropertyCondition)
+
+   TestDatabaseAutoConfiguration#embeddedDataSourceBeanFactoryPostProcessor:
+      Did not match:
+         - @ConditionalOnProperty (spring.test.database.replace=ANY) found different value in property 'replace' (OnPropertyCondition)
+
+   TestDatabaseAutoConfiguration#nonTestEmbeddedDataSourceBeanFactoryPostProcessor:
+      Did not match:
+         - @ConditionalOnProperty (spring.test.database.replace=NON_TEST) found different value in property 'replace' (OnPropertyCondition)
+
+   TransactionAutoConfiguration#transactionalOperator:
+      Did not match:
+         - @ConditionalOnSingleCandidate (types: org.springframework.transaction.ReactiveTransactionManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TransactionAutoConfiguration.AspectJTransactionManagementConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.transaction.aspectj.AbstractTransactionAspect; SearchStrategy: all) did not find any beans of type org.springframework.transaction.aspectj.AbstractTransactionAspect (OnBeanCondition)
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration.JdkDynamicAutoProxyConfiguration:
+      Did not match:
+         - @ConditionalOnProperty (spring.aop.proxy-target-class=false) did not find property 'proxy-target-class' (OnPropertyCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration
+
+
+
+2025-05-01T17:14:08.514-04:00  INFO 15316 --- [peteventsapp] [    Test worker] c.p.p.repositories.EventRepositoryTest   : Started EventRepositoryTest in 46.21 seconds (process running for 56.369)
+2025-05-01T17:14:08.515-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 52, missCount = 2, failureCount = 0]
+2025-05-01T17:14:08.517-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 53, missCount = 2, failureCount = 0]
+2025-05-01T17:14:08.519-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] sContextBeforeModesTestExecutionListener : Before test method: class [EventRepositoryTest], method [getEventByIdTest], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2025-05-01T17:14:08.524-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] t.c.t.TransactionalTestExecutionListener : Explicit transaction definition [PROPAGATION_REQUIRED,ISOLATION_DEFAULT] found for test class [com.petevents.peteventsapp.repositories.EventRepositoryTest] and test method [getEventByIdTest]
+2025-05-01T17:14:08.524-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 54, missCount = 2, failureCount = 0]
+2025-05-01T17:14:08.527-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] t.c.t.TransactionalTestExecutionListener : No method-level @Rollback override: using default rollback [true] for test method [void com.petevents.peteventsapp.repositories.EventRepositoryTest.getEventByIdTest()]
+2025-05-01T17:14:08.528-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.petevents.peteventsapp.repositories.EventRepositoryTest.getEventByIdTest]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-05-01T17:14:08.529-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(132160494<open>)] for JPA transaction
+2025-05-01T17:14:08.534-04:00  INFO 15316 --- [peteventsapp] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-01T17:14:08.534-04:00  WARN 15316 --- [peteventsapp] [    Test worker] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2025-05-01T17:15:08.813-04:00  INFO 15316 --- [peteventsapp] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@37403f66
+2025-05-01T17:15:08.817-04:00  INFO 15316 --- [peteventsapp] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-01T17:15:08.825-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@623dac3]
+2025-05-01T17:15:08.826-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test class [com.petevents.peteventsapp.repositories.EventRepositoryTest]; test method [getEventByIdTest]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@6135bb54]; rollback [true]
+2025-05-01T17:15:08.828-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 55, missCount = 2, failureCount = 0]
+2025-05-01T17:15:08.828-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 56, missCount = 2, failureCount = 0]
+2025-05-01T17:15:08.830-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 57, missCount = 2, failureCount = 0]
+2025-05-01T17:15:08.830-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 58, missCount = 2, failureCount = 0]
+2025-05-01T17:15:08.840-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(132160494<open>)] for JPA transaction
+2025-05-01T17:15:08.840-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+Hibernate: insert into events (description,event_type_id,event_date,name,id) values (?,?,?,?,default)
+2025-05-01T17:15:09.239-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(132160494<open>)] for JPA transaction
+2025-05-01T17:15:09.240-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2025-05-01T17:15:09.258-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 59, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.258-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 60, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.259-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 61, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.259-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 62, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.259-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 63, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.260-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 64, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.260-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 65, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.260-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 66, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.261-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction rollback
+2025-05-01T17:15:09.261-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Rolling back JPA transaction on EntityManager [SessionImpl(132160494<open>)]
+2025-05-01T17:15:09.271-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(132160494<open>)] after transaction
+2025-05-01T17:15:09.276-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction (1) for test class [com.petevents.peteventsapp.repositories.EventRepositoryTest]; test method [getEventByIdTest]
+2025-05-01T17:15:09.277-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] .c.s.DirtiesContextTestExecutionListener : After test method: class [EventRepositoryTest], method [getEventByIdTest], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2025-05-01T17:15:09.278-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] DependencyInjectionTestExecutionListener : Performing dependency injection for test class com.petevents.peteventsapp.repositories.EventRepositoryTest
+2025-05-01T17:15:09.278-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 67, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.279-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 68, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.279-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] sContextBeforeModesTestExecutionListener : Before test method: class [EventRepositoryTest], method [storeEventTest], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2025-05-01T17:15:09.280-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] t.c.t.TransactionalTestExecutionListener : Explicit transaction definition [PROPAGATION_REQUIRED,ISOLATION_DEFAULT] found for test class [com.petevents.peteventsapp.repositories.EventRepositoryTest] and test method [storeEventTest]
+2025-05-01T17:15:09.280-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 69, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.280-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] t.c.t.TransactionalTestExecutionListener : No method-level @Rollback override: using default rollback [true] for test method [void com.petevents.peteventsapp.repositories.EventRepositoryTest.storeEventTest()]
+2025-05-01T17:15:09.280-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.petevents.peteventsapp.repositories.EventRepositoryTest.storeEventTest]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-05-01T17:15:09.280-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(1708119397<open>)] for JPA transaction
+2025-05-01T17:15:09.280-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@3940c41c]
+2025-05-01T17:15:09.281-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test class [com.petevents.peteventsapp.repositories.EventRepositoryTest]; test method [storeEventTest]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@6135bb54]; rollback [true]
+2025-05-01T17:15:09.282-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 70, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.282-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 71, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.282-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 72, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.283-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 73, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.283-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1708119397<open>)] for JPA transaction
+2025-05-01T17:15:09.283-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+Hibernate: insert into events (description,event_type_id,event_date,name,id) values (?,?,?,?,default)
+2025-05-01T17:15:09.305-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 74, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.306-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 75, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.306-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 76, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.306-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 77, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.306-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 78, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.307-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 79, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.307-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 80, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.307-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 81, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.307-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction rollback
+2025-05-01T17:15:09.307-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Rolling back JPA transaction on EntityManager [SessionImpl(1708119397<open>)]
+2025-05-01T17:15:09.319-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(1708119397<open>)] after transaction
+2025-05-01T17:15:09.320-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction (1) for test class [com.petevents.peteventsapp.repositories.EventRepositoryTest]; test method [storeEventTest]
+2025-05-01T17:15:09.320-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] .c.s.DirtiesContextTestExecutionListener : After test method: class [EventRepositoryTest], method [storeEventTest], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2025-05-01T17:15:09.321-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] DependencyInjectionTestExecutionListener : Performing dependency injection for test class com.petevents.peteventsapp.repositories.EventRepositoryTest
+2025-05-01T17:15:09.321-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 82, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.322-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 83, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.323-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] sContextBeforeModesTestExecutionListener : Before test method: class [EventRepositoryTest], method [deleteEventTest], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2025-05-01T17:15:09.323-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] t.c.t.TransactionalTestExecutionListener : Explicit transaction definition [PROPAGATION_REQUIRED,ISOLATION_DEFAULT] found for test class [com.petevents.peteventsapp.repositories.EventRepositoryTest] and test method [deleteEventTest]
+2025-05-01T17:15:09.323-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 84, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.323-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] t.c.t.TransactionalTestExecutionListener : No method-level @Rollback override: using default rollback [true] for test method [void com.petevents.peteventsapp.repositories.EventRepositoryTest.deleteEventTest()]
+2025-05-01T17:15:09.324-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.petevents.peteventsapp.repositories.EventRepositoryTest.deleteEventTest]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-05-01T17:15:09.324-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(256757005<open>)] for JPA transaction
+2025-05-01T17:15:09.324-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@13b52853]
+2025-05-01T17:15:09.324-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test class [com.petevents.peteventsapp.repositories.EventRepositoryTest]; test method [deleteEventTest]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@6135bb54]; rollback [true]
+2025-05-01T17:15:09.324-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 85, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.325-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 86, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.325-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 87, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.326-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 88, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.326-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(256757005<open>)] for JPA transaction
+2025-05-01T17:15:09.326-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+Hibernate: insert into events (description,event_type_id,event_date,name,id) values (?,?,?,?,default)
+2025-05-01T17:15:09.340-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(256757005<open>)] for JPA transaction
+2025-05-01T17:15:09.340-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2025-05-01T17:15:09.348-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(256757005<open>)] for JPA transaction
+2025-05-01T17:15:09.348-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2025-05-01T17:15:09.349-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 89, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.350-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 90, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.350-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 91, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.350-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 92, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.350-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 93, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.351-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 94, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.351-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 95, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.352-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 96, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.352-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction rollback
+2025-05-01T17:15:09.352-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Rolling back JPA transaction on EntityManager [SessionImpl(256757005<open>)]
+2025-05-01T17:15:09.367-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(256757005<open>)] after transaction
+2025-05-01T17:15:09.367-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction (1) for test class [com.petevents.peteventsapp.repositories.EventRepositoryTest]; test method [deleteEventTest]
+2025-05-01T17:15:09.367-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] .c.s.DirtiesContextTestExecutionListener : After test method: class [EventRepositoryTest], method [deleteEventTest], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2025-05-01T17:15:09.368-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 97, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.369-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 2, maxSize = 32, parentContextCount = 0, hitCount = 98, missCount = 2, failureCount = 0]
+2025-05-01T17:15:09.369-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] .c.s.DirtiesContextTestExecutionListener : After test class: class [EventRepositoryTest], class annotated with @DirtiesContext [false] with mode [null]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - EventControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>EventControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.petevents.peteventsapp.controllers.html">com.petevents.peteventsapp.controllers</a> &gt; EventControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.210s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+<li>
+<a href="#">Standard error</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">getAllEventsTest()</td>
+<td class="success">0.124s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getEventByIdTest()</td>
+<td class="success">0.942s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">storeEventTest()</td>
+<td class="success">0.144s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>17:13:14.147 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.petevents.peteventsapp.controllers.EventControllerTest]: EventControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:13:14.524 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.petevents.peteventsapp.PeteventsappApplication for test class com.petevents.peteventsapp.controllers.EventControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.4)
+
+2025-05-01T17:13:15.490-04:00  INFO 15316 --- [peteventsapp] [    Test worker] c.p.p.controllers.EventControllerTest    : Starting EventControllerTest using Java 21.0.6 with PID 15316 (started by sebas in C:\Users\sebas\DuocUC\Full Stack\Semana 8\PetEventsDBTests)
+2025-05-01T17:13:15.497-04:00  INFO 15316 --- [peteventsapp] [    Test worker] c.p.p.controllers.EventControllerTest    : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2025-05-01T17:13:15.500-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.boot.SpringApplication               : Loading source class com.petevents.peteventsapp.PeteventsappApplication
+2025-05-01T17:13:15.557-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@a137d7a
+2025-05-01T17:13:15.607-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2025-05-01T17:13:15.639-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+2025-05-01T17:13:15.782-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.c.a.ClassPathBeanDefinitionScanner   : Identified candidate component class: file [C:\Users\sebas\DuocUC\Full Stack\Semana 8\PetEventsDBTests\build\classes\java\main\com\petevents\peteventsapp\controllers\EventController.class]
+2025-05-01T17:13:16.663-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.context.ImportsContextCustomizer$ImportsCleanupPostProcessor'
+2025-05-01T17:13:16.679-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'springSecurityHandlerMappingIntrospectorBeanDefinitionRegistryPostProcessor'
+2025-05-01T17:13:16.837-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor'
+2025-05-01T17:13:18.248-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+2025-05-01T17:13:18.260-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'preserveErrorControllerTargetClassPostProcessor'
+2025-05-01T17:13:18.262-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'conversionServicePostProcessor'
+2025-05-01T17:13:18.300-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+2025-05-01T17:13:18.313-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2025-05-01T17:13:18.319-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2025-05-01T17:13:18.340-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2025-05-01T17:13:18.341-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor$SpyPostProcessor'
+2025-05-01T17:13:18.343-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor'
+2025-05-01T17:13:18.345-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.internalConfigurationPropertiesBinder'
+2025-05-01T17:13:18.373-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'projectingArgumentResolverBeanPostProcessor'
+2025-05-01T17:13:18.500-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'hypermediaRepresentionModelProcessorConfigurator'
+2025-05-01T17:13:18.503-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'hypermediaRestTemplateBeanPostProcessor'
+2025-05-01T17:13:18.516-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.u.c.s.UiApplicationContextUtils      : Unable to locate ThemeSource with name 'themeSource': using default [org.springframework.ui.context.support.ResourceBundleThemeSource@72eed547]
+2025-05-01T17:13:18.520-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.test.context.support.internalDynamicPropertyRegistrarBeanInitializer'
+2025-05-01T17:13:18.528-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'peteventsappApplication'
+2025-05-01T17:13:18.531-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'eventController'
+2025-05-01T17:13:18.565-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'eventController' via constructor to bean named 'com.petevents.peteventsapp.services.EventService#0'
+2025-05-01T17:13:18.568-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'com.petevents.peteventsapp.config.SecurityConfig'
+2025-05-01T17:13:18.577-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'securityFilterChain'
+2025-05-01T17:13:18.582-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration'
+2025-05-01T17:13:18.611-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'objectPostProcessor'
+2025-05-01T17:13:18.611-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration'
+2025-05-01T17:13:18.616-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'objectPostProcessor' via factory method to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@7be71476'
+2025-05-01T17:13:18.623-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration'
+2025-05-01T17:13:18.629-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'enableGlobalAuthenticationAutowiredConfigurer'
+2025-05-01T17:13:18.631-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'enableGlobalAuthenticationAutowiredConfigurer' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@a137d7a'
+2025-05-01T17:13:18.639-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'initializeUserDetailsBeanManagerConfigurer'
+2025-05-01T17:13:18.640-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'initializeUserDetailsBeanManagerConfigurer' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@a137d7a'
+2025-05-01T17:13:18.642-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'initializeAuthenticationProviderBeanManagerConfigurer'
+2025-05-01T17:13:18.643-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'initializeAuthenticationProviderBeanManagerConfigurer' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@a137d7a'
+2025-05-01T17:13:18.653-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcContentNegotiationManager'
+2025-05-01T17:13:18.654-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration'
+2025-05-01T17:13:18.658-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties'
+2025-05-01T17:13:18.669-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.properties.BoundConfigurationProperties'
+2025-05-01T17:13:18.712-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+2025-05-01T17:13:18.726-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration' via constructor to bean named 'spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties'
+2025-05-01T17:13:18.726-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration' via constructor to bean named 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+2025-05-01T17:13:18.727-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration' via constructor to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@7be71476'
+2025-05-01T17:13:18.753-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter'
+2025-05-01T17:13:18.758-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter' via constructor to bean named 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+2025-05-01T17:13:18.759-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter' via constructor to bean named 'spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties'
+2025-05-01T17:13:18.760-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter' via constructor to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@7be71476'
+2025-05-01T17:13:18.770-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.data.web.config.HateoasAwareSpringDataWebConfiguration'
+2025-05-01T17:13:18.771-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.data.web.config.HateoasAwareSpringDataWebConfiguration' via constructor to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@a137d7a'
+2025-05-01T17:13:18.780-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'hypermediaWebMvcConfigurer'
+2025-05-01T17:13:18.782-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.hateoas.config.WebMvcHateoasConfiguration'
+2025-05-01T17:13:18.785-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'hypermediaWebMvcConverters'
+2025-05-01T17:13:18.785-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.hateoas.config.HateoasConfiguration'
+2025-05-01T17:13:18.789-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration'
+2025-05-01T17:13:18.792-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean '_relProvider'
+2025-05-01T17:13:18.795-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'relProviderPluginRegistry'
+2025-05-01T17:13:18.797-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'relProviderPluginRegistry' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@a137d7a'
+2025-05-01T17:13:18.840-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name '_relProvider' via factory method to bean named 'relProviderPluginRegistry'
+2025-05-01T17:13:18.845-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'messageResolver'
+2025-05-01T17:13:18.873-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration' via constructor to bean named '_relProvider'
+2025-05-01T17:13:18.874-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration' via constructor to bean named 'messageResolver'
+2025-05-01T17:13:18.875-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration' via constructor to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@7be71476'
+2025-05-01T17:13:18.890-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'hypermediaWebMvcConverters' via factory method to bean named 'org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration'
+2025-05-01T17:13:18.901-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jacksonObjectMapper'
+2025-05-01T17:13:18.902-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration'
+2025-05-01T17:13:18.906-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration'
+2025-05-01T17:13:18.910-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'standardJacksonObjectMapperBuilderCustomizer'
+2025-05-01T17:13:18.911-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration'
+2025-05-01T17:13:18.920-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties'
+2025-05-01T17:13:18.945-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'standardJacksonObjectMapperBuilderCustomizer' via factory method to bean named 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties'
+2025-05-01T17:13:18.952-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'parameterNamesModule'
+2025-05-01T17:13:18.953-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration'
+2025-05-01T17:13:18.970-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jsonMixinModule'
+2025-05-01T17:13:18.971-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonMixinConfiguration'
+2025-05-01T17:13:18.974-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jsonMixinModuleEntries'
+2025-05-01T17:13:18.975-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jsonMixinModuleEntries' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@a137d7a'
+2025-05-01T17:13:18.976-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.AutoConfigurationPackages'
+2025-05-01T17:13:18.980-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.petevents.peteventsapp'. Automatic @Repository and @Entity scanning is enabled.
+2025-05-01T17:13:19.005-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jsonMixinModule' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@a137d7a'
+2025-05-01T17:13:19.005-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jsonMixinModule' via factory method to bean named 'jsonMixinModuleEntries'
+2025-05-01T17:13:19.017-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jsonComponentModule'
+2025-05-01T17:13:19.017-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration'
+2025-05-01T17:13:19.039-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jacksonGeoModule'
+2025-05-01T17:13:19.041-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.data.web.config.SpringDataJacksonConfiguration'
+2025-05-01T17:13:19.046-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'springDataWebSettings'
+2025-05-01T17:13:19.048-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration'
+2025-05-01T17:13:19.050-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.data.web-org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties'
+2025-05-01T17:13:19.053-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration' via constructor to bean named 'spring.data.web-org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties'
+2025-05-01T17:13:19.085-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'pageModule'
+2025-05-01T17:13:19.098-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jacksonObjectMapperBuilder' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@a137d7a'
+2025-05-01T17:13:19.101-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jacksonObjectMapperBuilder' via factory method to bean named 'standardJacksonObjectMapperBuilderCustomizer'
+2025-05-01T17:13:19.108-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jacksonObjectMapper' via factory method to bean named 'jacksonObjectMapperBuilder'
+2025-05-01T17:13:19.175-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'hypermediaWebMvcConfigurer' via factory method to bean named 'hypermediaWebMvcConverters'
+2025-05-01T17:13:19.178-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration'
+2025-05-01T17:13:19.201-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'authenticationManagerBuilder'
+2025-05-01T17:13:19.203-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'authenticationManagerBuilder' via factory method to bean named 'objectPostProcessor'
+2025-05-01T17:13:19.203-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'authenticationManagerBuilder' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@a137d7a'
+2025-05-01T17:13:19.205-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'authenticationEventPublisher'
+2025-05-01T17:13:19.207-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration'
+2025-05-01T17:13:19.209-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'authenticationEventPublisher' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@a137d7a'
+2025-05-01T17:13:19.242-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration$WebSecurityEnablerConfiguration'
+2025-05-01T17:13:19.247-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'inMemoryUserDetailsManager'
+2025-05-01T17:13:19.248-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration'
+2025-05-01T17:13:19.250-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.security-org.springframework.boot.autoconfigure.security.SecurityProperties'
+2025-05-01T17:13:19.255-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'inMemoryUserDetailsManager' via factory method to bean named 'spring.security-org.springframework.boot.autoconfigure.security.SecurityProperties'
+2025-05-01T17:13:19.265-04:00  WARN 15316 --- [peteventsapp] [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 0857ceee-0f85-427e-b265-9ce4f86861e3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-01T17:13:19.345-04:00  INFO 15316 --- [peteventsapp] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-01T17:13:19.492-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'securityFilterChain' via factory method to bean named 'org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity'
+2025-05-01T17:13:19.512-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webAuthorizationManagerPostProcessor'
+2025-05-01T17:13:19.540-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'authenticationManagerPostProcessor'
+2025-05-01T17:13:19.584-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-01T17:13:19.586-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$ThreadPoolTaskExecutorBuilderConfiguration'
+2025-05-01T17:13:19.587-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'threadPoolTaskExecutorBuilder'
+2025-05-01T17:13:19.590-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2025-05-01T17:13:19.601-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'threadPoolTaskExecutorBuilder' via factory method to bean named 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2025-05-01T17:13:19.612-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration'
+2025-05-01T17:13:19.615-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration' via constructor to bean named 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2025-05-01T17:13:19.619-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'simpleAsyncTaskExecutorBuilder'
+2025-05-01T17:13:19.621-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$TaskExecutorConfiguration'
+2025-05-01T17:13:19.623-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration'
+2025-05-01T17:13:19.624-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter'
+2025-05-01T17:13:19.632-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration'
+2025-05-01T17:13:19.635-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'error'
+2025-05-01T17:13:19.636-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'beanNameViewResolver'
+2025-05-01T17:13:19.639-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration'
+2025-05-01T17:13:19.641-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration' via constructor to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@a137d7a'
+2025-05-01T17:13:19.643-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration' via constructor to bean named 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+2025-05-01T17:13:19.644-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration'
+2025-05-01T17:13:19.645-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'server-org.springframework.boot.autoconfigure.web.ServerProperties'
+2025-05-01T17:13:19.700-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration' via constructor to bean named 'server-org.springframework.boot.autoconfigure.web.ServerProperties'
+2025-05-01T17:13:19.701-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'errorAttributes'
+2025-05-01T17:13:19.710-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'basicErrorController'
+2025-05-01T17:13:19.710-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'basicErrorController' via factory method to bean named 'errorAttributes'
+2025-05-01T17:13:19.720-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'errorPageCustomizer'
+2025-05-01T17:13:19.720-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'dispatcherServletPath'
+2025-05-01T17:13:19.722-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration'
+2025-05-01T17:13:19.723-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'dispatcherServletPath' via factory method to bean named 'spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties'
+2025-05-01T17:13:19.725-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'errorPageCustomizer' via factory method to bean named 'dispatcherServletPath'
+2025-05-01T17:13:19.726-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'welcomePageHandlerMapping'
+2025-05-01T17:13:19.727-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcConversionService'
+2025-05-01T17:13:19.751-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcResourceUrlProvider'
+2025-05-01T17:13:19.754-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageHandlerMapping' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@a137d7a'
+2025-05-01T17:13:19.755-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageHandlerMapping' via factory method to bean named 'mvcConversionService'
+2025-05-01T17:13:19.755-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+2025-05-01T17:13:19.798-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'welcomePageNotAcceptableHandlerMapping'
+2025-05-01T17:13:19.799-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageNotAcceptableHandlerMapping' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@a137d7a'
+2025-05-01T17:13:19.799-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageNotAcceptableHandlerMapping' via factory method to bean named 'mvcConversionService'
+2025-05-01T17:13:19.800-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageNotAcceptableHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+2025-05-01T17:13:19.807-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'localeResolver'
+2025-05-01T17:13:19.810-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'themeResolver'
+2025-05-01T17:13:19.814-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'flashMapManager'
+2025-05-01T17:13:19.820-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'viewNameTranslator'
+2025-05-01T17:13:19.823-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcValidator'
+2025-05-01T17:13:19.841-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider
+
+jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+	at jakarta.validation.Validation$GenericBootstrapImpl.configure(Validation.java:291) ~[jakarta.jakartaee-api-10.0.0.jar:na]
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:270) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.validation.beanvalidation.OptionalValidatorFactoryBean.afterPropertiesSet(OptionalValidatorFactoryBean.java:40) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.boot.autoconfigure.validation.ValidatorAdapter.afterPropertiesSet(ValidatorAdapter.java:85) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1155) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1121) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1056) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:144) ~[spring-boot-test-3.4.4.jar:3.4.4]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:563) ~[spring-boot-test-3.4.4.jar:3.4.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:144) ~[spring-boot-test-3.4.4.jar:3.4.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:110) ~[spring-boot-test-3.4.4.jar:3.4.4]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:128) ~[spring-boot-test-3.4.4.jar:3.4.4]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:112) ~[spring-boot-test-3.4.4.jar:3.4.4]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:69) ~[spring-boot-test-3.4.4.jar:3.4.4]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:160) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$12(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$7(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$6(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$1(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) ~[na:na]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) ~[na:na]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92) ~[na:na]
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63) ~[na:na]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
+
+2025-05-01T17:13:19.871-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'requestMappingHandlerMapping'
+2025-05-01T17:13:19.874-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcContentNegotiationManager'
+2025-05-01T17:13:19.875-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcConversionService'
+2025-05-01T17:13:19.875-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+2025-05-01T17:13:19.994-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2025-05-01T17:13:19.996-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcPatternParser'
+2025-05-01T17:13:19.998-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcUrlPathHelper'
+2025-05-01T17:13:19.999-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcPathMatcher'
+2025-05-01T17:13:20.001-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'viewControllerHandlerMapping'
+2025-05-01T17:13:20.002-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'viewControllerHandlerMapping' via factory method to bean named 'mvcConversionService'
+2025-05-01T17:13:20.003-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'viewControllerHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+2025-05-01T17:13:20.004-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'beanNameHandlerMapping'
+2025-05-01T17:13:20.005-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'beanNameHandlerMapping' via factory method to bean named 'mvcConversionService'
+2025-05-01T17:13:20.005-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'beanNameHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+2025-05-01T17:13:20.008-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'routerFunctionMapping'
+2025-05-01T17:13:20.009-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'routerFunctionMapping' via factory method to bean named 'mvcConversionService'
+2025-05-01T17:13:20.010-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'routerFunctionMapping' via factory method to bean named 'mvcResourceUrlProvider'
+2025-05-01T17:13:20.012-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'messageConverters'
+2025-05-01T17:13:20.012-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration'
+2025-05-01T17:13:20.019-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'stringHttpMessageConverter'
+2025-05-01T17:13:20.019-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration'
+2025-05-01T17:13:20.020-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'stringHttpMessageConverter' via factory method to bean named 'environment'
+2025-05-01T17:13:20.028-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mappingJackson2HttpMessageConverter'
+2025-05-01T17:13:20.028-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration'
+2025-05-01T17:13:20.029-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mappingJackson2HttpMessageConverter' via factory method to bean named 'jacksonObjectMapper'
+2025-05-01T17:13:20.134-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'applicationJsonHalConfiguration'
+2025-05-01T17:13:20.136-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration'
+2025-05-01T17:13:20.174-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'resourceHandlerMapping'
+2025-05-01T17:13:20.175-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'resourceHandlerMapping' via factory method to bean named 'mvcContentNegotiationManager'
+2025-05-01T17:13:20.176-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'resourceHandlerMapping' via factory method to bean named 'mvcConversionService'
+2025-05-01T17:13:20.176-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'resourceHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+2025-05-01T17:13:20.220-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-05-01T17:13:20.221-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'defaultServletHandlerMapping'
+2025-05-01T17:13:20.221-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'requestMappingHandlerAdapter'
+2025-05-01T17:13:20.223-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'mvcContentNegotiationManager'
+2025-05-01T17:13:20.224-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'mvcConversionService'
+2025-05-01T17:13:20.224-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'mvcValidator'
+2025-05-01T17:13:20.238-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'sortResolver'
+2025-05-01T17:13:20.242-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'sortCustomizer'
+2025-05-01T17:13:20.252-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'pageableResolver'
+2025-05-01T17:13:20.256-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'pageableCustomizer'
+2025-05-01T17:13:20.259-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'pagedResourcesAssemblerArgumentResolver'
+2025-05-01T17:13:20.260-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'slicedResourcesAssemblerArgumentResolver'
+2025-05-01T17:13:20.274-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'applicationTaskExecutor'
+2025-05-01T17:13:20.275-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'applicationTaskExecutor' via factory method to bean named 'threadPoolTaskExecutorBuilder'
+2025-05-01T17:13:20.291-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2025-05-01T17:13:20.318-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-01T17:13:20.385-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcViewResolver'
+2025-05-01T17:13:20.386-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mvcViewResolver' via factory method to bean named 'mvcContentNegotiationManager'
+2025-05-01T17:13:20.393-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'defaultViewResolver'
+2025-05-01T17:13:20.407-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'viewResolver'
+2025-05-01T17:13:20.408-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'viewResolver' via factory method to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@7be71476'
+2025-05-01T17:13:20.410-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'viewResolver'
+2025-05-01T17:13:20.451-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'handlerFunctionAdapter'
+2025-05-01T17:13:20.457-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcUriComponentsContributor'
+2025-05-01T17:13:20.459-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mvcUriComponentsContributor' via factory method to bean named 'mvcConversionService'
+2025-05-01T17:13:20.459-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mvcUriComponentsContributor' via factory method to bean named 'requestMappingHandlerAdapter'
+2025-05-01T17:13:20.460-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'httpRequestHandlerAdapter'
+2025-05-01T17:13:20.462-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'simpleControllerHandlerAdapter'
+2025-05-01T17:13:20.464-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'handlerExceptionResolver'
+2025-05-01T17:13:20.466-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'handlerExceptionResolver' via factory method to bean named 'mvcContentNegotiationManager'
+2025-05-01T17:13:20.471-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-01T17:13:20.479-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'requestContextFilter'
+2025-05-01T17:13:20.484-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration'
+2025-05-01T17:13:20.485-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'formContentFilter'
+2025-05-01T17:13:20.488-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration'
+2025-05-01T17:13:20.488-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.JsonbHttpMessageConvertersConfiguration'
+2025-05-01T17:13:20.489-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.data.web.config.ProjectingArgumentResolverRegistrar'
+2025-05-01T17:13:20.490-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'pagedResourcesAssembler'
+2025-05-01T17:13:20.500-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'slicedResourcesAssembler'
+2025-05-01T17:13:20.503-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'offsetResolver'
+2025-05-01T17:13:20.508-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'halLinkDisocoverer'
+2025-05-01T17:13:20.514-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.hateoas.config.WebTestHateoasConfiguration'
+2025-05-01T17:13:20.516-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'defaultRelProvider'
+2025-05-01T17:13:20.520-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'annotationRelProvider'
+2025-05-01T17:13:20.522-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'linkDiscoverers'
+2025-05-01T17:13:20.524-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'linkDiscovererRegistry'
+2025-05-01T17:13:20.532-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'linkDiscoverers' via factory method to bean named 'linkDiscovererRegistry'
+2025-05-01T17:13:20.534-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.hateoas.config.WebMvcEntityLinksConfiguration'
+2025-05-01T17:13:20.535-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webMvcEntityLinks'
+2025-05-01T17:13:20.539-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webMvcLinkBuilderFactory'
+2025-05-01T17:13:20.554-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'entityLinksPluginRegistry'
+2025-05-01T17:13:20.555-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'entityLinksPluginRegistry' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@a137d7a'
+2025-05-01T17:13:20.556-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'delegatingEntityLinks'
+2025-05-01T17:13:20.558-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'delegatingEntityLinks' via factory method to bean named 'entityLinksPluginRegistry'
+2025-05-01T17:13:20.560-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'representationModelProcessorInvoker'
+2025-05-01T17:13:20.566-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.hateoas.config.RestTemplateHateoasConfiguration'
+2025-05-01T17:13:20.568-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration$HypermediaConfiguration'
+2025-05-01T17:13:20.569-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.hateoas-org.springframework.boot.autoconfigure.hateoas.HateoasProperties'
+2025-05-01T17:13:20.571-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration'
+2025-05-01T17:13:20.590-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'filterChainDecoratorPostProcessor'
+2025-05-01T17:13:20.591-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcHandlerMappingIntrospectorRequestTransformer'
+2025-05-01T17:13:20.592-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcHandlerMappingIntrospector'
+2025-05-01T17:13:20.609-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'delegatingApplicationListener'
+2025-05-01T17:13:20.610-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'springSecurityFilterChain'
+2025-05-01T17:13:20.656-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webSecurityExpressionHandler'
+2025-05-01T17:13:20.658-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'privilegeEvaluator'
+2025-05-01T17:13:20.660-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'requestDataValueProcessor'
+2025-05-01T17:13:20.666-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.security.config.annotation.web.configuration.ObservationConfiguration'
+2025-05-01T17:13:20.668-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration'
+2025-05-01T17:13:20.668-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration'
+2025-05-01T17:13:20.670-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'securityFilterChainRegistration'
+2025-05-01T17:13:20.671-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'securityFilterChainRegistration' via factory method to bean named 'spring.security-org.springframework.boot.autoconfigure.security.SecurityProperties'
+2025-05-01T17:13:20.685-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration'
+2025-05-01T17:13:20.685-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration' via constructor to bean named 'server-org.springframework.boot.autoconfigure.web.ServerProperties'
+2025-05-01T17:13:20.686-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'characterEncodingFilter'
+2025-05-01T17:13:20.688-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'localeCharsetMappingsCustomizer'
+2025-05-01T17:13:20.693-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.autoconfigure.web.servlet.MockMvcConfiguration'
+2025-05-01T17:13:20.694-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.test.autoconfigure.web.servlet.MockMvcConfiguration' via constructor to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@a137d7a'
+2025-05-01T17:13:20.694-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.test.autoconfigure.web.servlet.MockMvcConfiguration' via constructor to bean named 'spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties'
+2025-05-01T17:13:20.694-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mockMvcBuilder'
+2025-05-01T17:13:20.696-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'springBootMockMvcBuilderCustomizer'
+2025-05-01T17:13:20.705-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'securityMockMvcBuilderCustomizer'
+2025-05-01T17:13:20.707-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration'
+2025-05-01T17:13:20.710-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mockMvcBuilder' via factory method to bean named 'springBootMockMvcBuilderCustomizer'
+2025-05-01T17:13:20.710-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mockMvcBuilder' via factory method to bean named 'securityMockMvcBuilderCustomizer'
+2025-05-01T17:13:20.729-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2025-05-01T17:13:20.731-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: 
+2025-05-01T17:13:20.744-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mockMvc'
+2025-05-01T17:13:20.745-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mockMvc' via factory method to bean named 'mockMvcBuilder'
+2025-05-01T17:13:20.790-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] s.b.w.s.f.OrderedCharacterEncodingFilter : Filter 'characterEncodingFilter' configured for use
+2025-05-01T17:13:20.790-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.w.s.f.OrderedFormContentFilter     : Filter 'formContentFilter' configured for use
+2025-05-01T17:13:20.790-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.w.s.f.OrderedRequestContextFilter  : Filter 'requestContextFilter' configured for use
+2025-05-01T17:13:20.791-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] .DelegatingFilterProxyRegistrationBean$1 : Filter 'springSecurityFilterChain' configured for use
+2025-05-01T17:13:20.810-04:00  INFO 15316 --- [peteventsapp] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-05-01T17:13:20.810-04:00  INFO 15316 --- [peteventsapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-05-01T17:13:20.811-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Detected AcceptHeaderLocaleResolver
+2025-05-01T17:13:20.812-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Detected FixedThemeResolver
+2025-05-01T17:13:20.815-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@61993d18
+2025-05-01T17:13:20.815-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Detected org.springframework.web.servlet.support.SessionFlashMapManager@26865b57
+2025-05-01T17:13:20.817-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-05-01T17:13:20.818-04:00  INFO 15316 --- [peteventsapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 8 ms
+2025-05-01T17:13:20.821-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.autoconfigure.web.servlet.MockMvcTesterConfiguration'
+2025-05-01T17:13:20.822-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mockMvcTester'
+2025-05-01T17:13:20.823-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mockMvcTester' via factory method to bean named 'mockMvc'
+2025-05-01T17:13:20.829-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'dispatcherServlet'
+2025-05-01T17:13:20.832-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'dispatcherServlet' via factory method to bean named 'mockMvc'
+2025-05-01T17:13:20.874-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase -2147483647
+2025-05-01T17:13:20.875-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.c.support.DefaultLifecycleProcessor  : Successfully started bean 'springBootLoggingLifecycle'
+2025-05-01T17:13:20.875-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 1073741823
+2025-05-01T17:13:20.891-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+
+============================
+CONDITIONS EVALUATION REPORT
+============================
+
+
+Positive matches:
+-----------------
+
+   ErrorMvcAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   ErrorMvcAutoConfiguration#basicErrorController matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.web.servlet.error.ErrorController; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration#errorAttributes matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.web.servlet.error.ErrorAttributes; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration matched:
+      - @ConditionalOnProperty (server.error.whitelabel.enabled) matched (OnPropertyCondition)
+      - ErrorTemplate Missing did not find error template view (ErrorMvcAutoConfiguration.ErrorTemplateMissingCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#beanNameViewResolver matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#defaultErrorView matched:
+      - @ConditionalOnMissingBean (names: error; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HttpEncodingAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.filter.CharacterEncodingFilter' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnProperty (server.servlet.encoding.enabled) matched (OnPropertyCondition)
+
+   HttpEncodingAutoConfiguration#characterEncodingFilter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.CharacterEncodingFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HttpMessageConvertersAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.HttpMessageConverter' (OnClassCondition)
+      - NoneNestedConditions 0 matched 1 did not; NestedCondition on HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition.ReactiveWebApplication did not find reactive web application classes (HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition)
+
+   HttpMessageConvertersAutoConfiguration#messageConverters matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.http.HttpMessageConverters; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.StringHttpMessageConverter' (OnClassCondition)
+
+   HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration#stringHttpMessageConverter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.StringHttpMessageConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HypermediaAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.hateoas.EntityModel', 'org.springframework.web.bind.annotation.RequestMapping', 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter', 'org.springframework.plugin.core.Plugin' (OnClassCondition)
+      - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
+
+   HypermediaAutoConfiguration#applicationJsonHalConfiguration matched:
+      - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
+      - @ConditionalOnProperty (spring.hateoas.use-hal-as-default-json-media-type) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.hateoas.mediatype.hal.HalConfiguration; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HypermediaAutoConfiguration.HypermediaConfiguration matched:
+      - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.hateoas.client.LinkDiscoverers; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
+
+   JacksonAutoConfiguration.Jackson2ObjectMapperBuilderCustomizerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration#jacksonObjectMapperBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.json.Jackson2ObjectMapperBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperConfiguration#jacksonObjectMapper matched:
+      - @ConditionalOnMissingBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration.ParameterNamesModuleConfiguration matched:
+      - @ConditionalOnClass found required class 'com.fasterxml.jackson.module.paramnames.ParameterNamesModule' (OnClassCondition)
+
+   JacksonAutoConfiguration.ParameterNamesModuleConfiguration#parameterNamesModule matched:
+      - @ConditionalOnMissingBean (types: com.fasterxml.jackson.module.paramnames.ParameterNamesModule; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonHttpMessageConvertersConfiguration.MappingJackson2HttpMessageConverterConfiguration matched:
+      - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
+      - @ConditionalOnProperty (spring.mvc.converters.preferred-json-mapper=jackson) matched (OnPropertyCondition)
+      - @ConditionalOnBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) found bean 'jacksonObjectMapper' (OnBeanCondition)
+
+   JacksonHttpMessageConvertersConfiguration.MappingJackson2HttpMessageConverterConfiguration#mappingJackson2HttpMessageConverter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.json.MappingJackson2HttpMessageConverter ignored: org.springframework.hateoas.server.mvc.TypeConstrainedMappingJackson2HttpMessageConverter,org.springframework.data.rest.webmvc.alps.AlpsJsonHttpMessageConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JsonbHttpMessageConvertersConfiguration matched:
+      - @ConditionalOnClass found required class 'jakarta.json.bind.Jsonb' (OnClassCondition)
+
+   MockMvcAutoConfiguration matched:
+      - found 'session' scope (OnWebApplicationCondition)
+
+   MockMvcAutoConfiguration#dispatcherServlet matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.DispatcherServlet; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MockMvcAutoConfiguration#dispatcherServletPath matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.web.servlet.DispatcherServletPath; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MockMvcConfiguration#mockMvc matched:
+      - @ConditionalOnMissingBean (types: org.springframework.test.web.servlet.MockMvc; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MockMvcConfiguration#mockMvcBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.test.web.servlet.MockMvcBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MockMvcSecurityConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors' (OnClassCondition)
+
+   MockMvcSecurityConfiguration#securityMockMvcBuilderCustomizer matched:
+      - @ConditionalOnBean (names: springSecurityFilterChain; SearchStrategy: all) found bean 'springSecurityFilterChain' (OnBeanCondition)
+
+   MockMvcTesterConfiguration matched:
+      - @ConditionalOnClass found required class 'org.assertj.core.api.Assert' (OnClassCondition)
+
+   MockMvcTesterConfiguration#mockMvcTester matched:
+      - @ConditionalOnMissingBean (types: org.springframework.test.web.servlet.assertj.MockMvcTester; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   NoOpCacheConfiguration matched:
+      - Cache org.springframework.boot.autoconfigure.cache.NoOpCacheConfiguration NONE cache type (CacheCondition)
+
+   SecurityAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.DefaultAuthenticationEventPublisher' (OnClassCondition)
+
+   SecurityAutoConfiguration#authenticationEventPublisher matched:
+      - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationEventPublisher; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SecurityFilterAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer', 'org.springframework.security.config.http.SessionCreationPolicy' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   SecurityFilterAutoConfiguration#securityFilterChainRegistration matched:
+      - @ConditionalOnBean (names: springSecurityFilterChain; SearchStrategy: all) found bean 'springSecurityFilterChain' (OnBeanCondition)
+
+   SpringBootWebSecurityConfiguration matched:
+      - found 'session' scope (OnWebApplicationCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SpringDataWebAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.data.web.PageableHandlerMethodArgumentResolver', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.PageableHandlerMethodArgumentResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SpringDataWebAutoConfiguration#pageableCustomizer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.config.PageableHandlerMethodArgumentResolverCustomizer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SpringDataWebAutoConfiguration#sortCustomizer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.config.SortHandlerMethodArgumentResolverCustomizer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SpringDataWebAutoConfiguration#springDataWebSettings matched:
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.config.SpringDataWebSettings; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutionAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor' (OnClassCondition)
+
+   TaskExecutorConfigurations.SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration matched:
+      - @ConditionalOnMissingBean (types: java.util.concurrent.Executor; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutor matched:
+      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
+
+   TaskExecutorConfigurations.ThreadPoolTaskExecutorBuilderConfiguration#threadPoolTaskExecutorBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.ThreadPoolTaskExecutorBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   UserDetailsServiceAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - AnyNestedCondition 1 matched 2 did not; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) did not find property 'password'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) did not find property 'name'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured)
+      - @ConditionalOnBean (types: org.springframework.security.config.ObjectPostProcessor; SearchStrategy: all) found beans 'objectPostProcessor', 'webAuthorizationManagerPostProcessor', 'filterChainDecoratorPostProcessor', 'authenticationManagerPostProcessor'; @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration#formContentFilter matched:
+      - @ConditionalOnProperty (spring.mvc.formcontent.filter.enabled) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.FormContentFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#flashMapManager matched:
+      - @ConditionalOnMissingBean (names: flashMapManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#localeResolver matched:
+      - @ConditionalOnMissingBean (names: localeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#themeResolver matched:
+      - @ConditionalOnMissingBean (names: themeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#viewNameTranslator matched:
+      - @ConditionalOnMissingBean (names: viewNameTranslator; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#defaultViewResolver matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.InternalResourceViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#requestContextFilter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.context.request.RequestContextListener,org.springframework.web.filter.RequestContextFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#viewResolver matched:
+      - @ConditionalOnBean (types: org.springframework.web.servlet.ViewResolver; SearchStrategy: all) found beans 'defaultViewResolver', 'beanNameViewResolver', 'mvcViewResolver'; @ConditionalOnMissingBean (names: viewResolver types: org.springframework.web.servlet.view.ContentNegotiatingViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   Cache2kCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.cache2k.Cache2kBuilder' (OnClassCondition)
+
+   CacheAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.cache.interceptor.CacheAspectSupport; SearchStrategy: all) did not find any beans of type org.springframework.cache.interceptor.CacheAspectSupport (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.cache.CacheManager' (OnClassCondition)
+
+   CacheAutoConfiguration.CacheManagerEntityManagerFactoryDependsOnPostProcessor:
+      Did not match:
+         - Ancestor org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration did not match (ConditionEvaluationReport.AncestorsMatchedCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean' (OnClassCondition)
+
+   CaffeineCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.github.benmanes.caffeine.cache.Caffeine' (OnClassCondition)
+
+   CouchbaseCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
+
+   ErrorMvcAutoConfiguration.DefaultErrorViewResolverConfiguration#conventionErrorViewResolver:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.web.servlet.DispatcherServlet; SearchStrategy: all) did not find any beans of type org.springframework.web.servlet.DispatcherServlet (OnBeanCondition)
+
+   FreeMarkerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'freemarker.template.Configuration' (OnClassCondition)
+
+   GenericCacheConfiguration:
+      Did not match:
+         - Cache org.springframework.boot.autoconfigure.cache.GenericCacheConfiguration unknown cache type (CacheCondition)
+
+   GroovyTemplateAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'groovy.text.markup.MarkupTemplateEngine' (OnClassCondition)
+
+   GsonAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.google.gson.Gson' (OnClassCondition)
+
+   GsonHttpMessageConvertersConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.google.gson.Gson' (OnClassCondition)
+
+   HazelcastCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
+
+   InfinispanCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.infinispan.spring.embedded.provider.SpringEmbeddedCacheManager' (OnClassCondition)
+
+   JCacheCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.cache.Caching' (OnClassCondition)
+
+   JacksonHttpMessageConvertersConfiguration.MappingJackson2XmlHttpMessageConverterConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.fasterxml.jackson.dataformat.xml.XmlMapper' (OnClassCondition)
+
+   JsonbAutoConfiguration:
+      Did not match:
+         - @ConditionalOnResource did not find resources 'classpath:META-INF/services/jakarta.json.bind.spi.JsonbProvider', 'classpath:META-INF/services/jakarta.json.spi.JsonProvider' (OnResourceCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'jakarta.json.bind.Jsonb' (OnClassCondition)
+
+   JsonbHttpMessageConvertersConfiguration.JsonbHttpMessageConverterConfiguration:
+      Did not match:
+         - AnyNestedCondition 0 matched 2 did not; NestedCondition on JsonbHttpMessageConvertersConfiguration.PreferJsonbOrMissingJacksonAndGsonCondition.JacksonAndGsonMissing @ConditionalOnMissingBean (types: org.springframework.http.converter.json.MappingJackson2HttpMessageConverter,org.springframework.http.converter.json.GsonHttpMessageConverter; SearchStrategy: all) found beans of type 'org.springframework.http.converter.json.MappingJackson2HttpMessageConverter' mappingJackson2HttpMessageConverter; NestedCondition on JsonbHttpMessageConvertersConfiguration.PreferJsonbOrMissingJacksonAndGsonCondition.JsonbPreferred @ConditionalOnProperty (spring.mvc.converters.preferred-json-mapper=jsonb) did not find property 'spring.mvc.converters.preferred-json-mapper' (JsonbHttpMessageConvertersConfiguration.PreferJsonbOrMissingJacksonAndGsonCondition)
+
+   MessageSourceAutoConfiguration:
+      Did not match:
+         - ResourceBundle did not find bundle with basename messages (MessageSourceAutoConfiguration.ResourceBundleCondition)
+
+   MockMvcAutoConfiguration.WebTestClientMockMvcConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
+
+   MockMvcWebClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.htmlunit.WebClient' (OnClassCondition)
+
+   MockMvcWebDriverAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.openqa.selenium.htmlunit.HtmlUnitDriver' (OnClassCondition)
+
+   MustacheAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.samskivert.mustache.Mustache' (OnClassCondition)
+
+   OAuth2ClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.client.registration.ClientRegistration' (OnClassCondition)
+
+   OAuth2ResourceServerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.server.resource.authentication.BearerTokenAuthenticationToken' (OnClassCondition)
+
+   RedisCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.connection.RedisConnectionFactory' (OnClassCondition)
+
+   SecurityDataConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.data.repository.query.SecurityEvaluationContextExtension' (OnClassCondition)
+
+   SimpleCacheConfiguration:
+      Did not match:
+         - Cache org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration unknown cache type (CacheCondition)
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' securityFilterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   TaskExecutorConfigurations.SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilderVirtualThreads:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder; SearchStrategy: all) found beans of type 'org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder' simpleAsyncTaskExecutorBuilder (OnBeanCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutorVirtualThreads:
+      Did not match:
+         - @ConditionalOnThreading did not find VIRTUAL (OnThreadingCondition)
+
+   ThymeleafAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.thymeleaf.spring6.SpringTemplateEngine' (OnClassCondition)
+
+   ValidationAutoConfiguration:
+      Did not match:
+         - @ConditionalOnResource did not find resource 'classpath:META-INF/services/jakarta.validation.spi.ValidationProvider' (OnResourceCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'jakarta.validation.executable.ExecutableValidator' (OnClassCondition)
+
+   WebMvcAutoConfiguration#hiddenHttpMethodFilter:
+      Did not match:
+         - @ConditionalOnProperty (spring.mvc.hiddenmethod.filter.enabled) did not find property 'enabled' (OnPropertyCondition)
+
+   WebMvcAutoConfiguration.ProblemDetailsErrorHandlingConfiguration:
+      Did not match:
+         - @ConditionalOnProperty (spring.mvc.problemdetails.enabled=true) did not find property 'enabled' (OnPropertyCondition)
+
+   WebMvcAutoConfiguration.ResourceChainCustomizerConfiguration:
+      Did not match:
+         - @ConditionalOnEnabledResourceChain did not find class org.webjars.WebJarVersionLocator (OnEnabledResourceChainCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#beanNameViewResolver:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.view.BeanNameViewResolver' beanNameViewResolver (OnBeanCondition)
+
+   WebTestClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2025-05-01T17:13:20.932-04:00  INFO 15316 --- [peteventsapp] [    Test worker] c.p.p.controllers.EventControllerTest    : Started EventControllerTest in 6.217 seconds (process running for 8.788)
+2025-05-01T17:13:20.943-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 0, missCount = 1, failureCount = 0]
+2025-05-01T17:13:20.946-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] DependencyInjectionTestExecutionListener : Performing dependency injection for test class com.petevents.peteventsapp.controllers.EventControllerTest
+2025-05-01T17:13:20.947-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 1, missCount = 1, failureCount = 0]
+2025-05-01T17:13:20.957-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 2, missCount = 1, failureCount = 0]
+2025-05-01T17:13:20.970-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] sContextBeforeModesTestExecutionListener : Before test method: class [EventControllerTest], method [getEventByIdTest], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2025-05-01T17:13:20.978-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 3, missCount = 1, failureCount = 0]
+2025-05-01T17:13:20.983-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 4, missCount = 1, failureCount = 0]
+2025-05-01T17:13:20.989-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 5, missCount = 1, failureCount = 0]
+2025-05-01T17:13:20.989-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 6, missCount = 1, failureCount = 0]
+2025-05-01T17:13:20.993-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 7, missCount = 1, failureCount = 0]
+2025-05-01T17:13:21.008-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 8, missCount = 1, failureCount = 0]
+2025-05-01T17:13:21.082-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.test.util.ReflectionTestUtils        : Invoking method 'getFilters' on target object [FilterChainProxy[Filter Chains: null]] or target class [null] with arguments {org.springframework.mock.web.MockHttpServletRequest@3d8bd881}
+2025-05-01T17:13:21.083-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.test.util.ReflectionTestUtils        : Invoking method 'getFilters' on target object [FilterChainProxy[Filter Chains: null]] or target class [null] with arguments {org.springframework.mock.web.MockHttpServletRequest@3d8bd881}
+2025-05-01T17:13:21.084-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.test.util.ReflectionTestUtils        : Getting field 'securityContextRepository' from target object [org.springframework.security.web.context.SecurityContextHolderFilter@38e00b47] or target class [class org.springframework.security.web.context.SecurityContextHolderFilter]
+2025-05-01T17:13:21.084-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.test.util.ReflectionTestUtils        : Invoking method 'getFilters' on target object [FilterChainProxy[Filter Chains: null]] or target class [null] with arguments {org.springframework.mock.web.MockHttpServletRequest@3d8bd881}
+2025-05-01T17:13:21.085-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.test.util.ReflectionTestUtils        : Invoking method 'getFilters' on target object [FilterChainProxy[Filter Chains: null]] or target class [null] with arguments {org.springframework.mock.web.MockHttpServletRequest@3d8bd881}
+2025-05-01T17:13:21.086-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.test.util.ReflectionTestUtils        : Setting field 'securityContextRepository' of type [null] on target object [org.springframework.security.web.context.SecurityContextHolderFilter@38e00b47] or target class [class org.springframework.security.web.context.SecurityContextHolderFilter] to value [org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors$SecurityContextRequestPostProcessorSupport$TestSecurityContextRepository@4ff0706c]
+2025-05-01T17:13:21.100-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] w.c.HttpSessionSecurityContextRepository : Created HttpSession as SecurityContext is non-default
+2025-05-01T17:13:21.105-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]] to HttpSession [org.springframework.mock.web.MockHttpSession@41f23499]
+2025-05-01T17:13:21.157-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.security.web.FilterChainProxy        : Securing GET /events/1
+2025-05-01T17:13:21.173-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.security.web.FilterChainProxy        : Secured GET /events/1
+2025-05-01T17:13:21.184-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : GET &quot;/events/1&quot;, parameters={}
+2025-05-01T17:13:21.186-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.petevents.peteventsapp.controllers.EventController#getEventById(Long)
+2025-05-01T17:13:21.665-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/hal+json', given [*/*] and supported [application/hal+json, application/json, application/*+json]
+2025-05-01T17:13:21.674-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [EntityModel { content: links: [], links: [&lt;http://localhost/events/1&gt;;rel=&quot;self&quot;, &lt;http://localhost/ (truncated)...]
+2025-05-01T17:13:21.751-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed 200 OK
+2025-05-01T17:13:21.751-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]]
+2025-05-01T17:13:21.867-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 9, missCount = 1, failureCount = 0]
+2025-05-01T17:13:21.868-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 10, missCount = 1, failureCount = 0]
+2025-05-01T17:13:21.870-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 11, missCount = 1, failureCount = 0]
+2025-05-01T17:13:21.872-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 12, missCount = 1, failureCount = 0]
+2025-05-01T17:13:21.873-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 13, missCount = 1, failureCount = 0]
+2025-05-01T17:13:21.874-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 14, missCount = 1, failureCount = 0]
+2025-05-01T17:13:21.878-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 15, missCount = 1, failureCount = 0]
+2025-05-01T17:13:21.881-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 16, missCount = 1, failureCount = 0]
+2025-05-01T17:13:21.883-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] .c.s.DirtiesContextTestExecutionListener : After test method: class [EventControllerTest], method [getEventByIdTest], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2025-05-01T17:13:21.906-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 17, missCount = 1, failureCount = 0]
+2025-05-01T17:13:21.906-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] DependencyInjectionTestExecutionListener : Performing dependency injection for test class com.petevents.peteventsapp.controllers.EventControllerTest
+2025-05-01T17:13:21.907-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 18, missCount = 1, failureCount = 0]
+2025-05-01T17:13:21.907-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 19, missCount = 1, failureCount = 0]
+2025-05-01T17:13:21.910-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] sContextBeforeModesTestExecutionListener : Before test method: class [EventControllerTest], method [getAllEventsTest], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2025-05-01T17:13:21.916-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 20, missCount = 1, failureCount = 0]
+2025-05-01T17:13:21.918-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 21, missCount = 1, failureCount = 0]
+2025-05-01T17:13:21.919-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 22, missCount = 1, failureCount = 0]
+2025-05-01T17:13:21.919-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 23, missCount = 1, failureCount = 0]
+2025-05-01T17:13:21.923-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 24, missCount = 1, failureCount = 0]
+2025-05-01T17:13:21.934-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 25, missCount = 1, failureCount = 0]
+2025-05-01T17:13:21.938-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.test.util.ReflectionTestUtils        : Invoking method 'getFilters' on target object [FilterChainProxy[Filter Chains: null]] or target class [null] with arguments {org.springframework.mock.web.MockHttpServletRequest@729a9c3d}
+2025-05-01T17:13:21.938-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.test.util.ReflectionTestUtils        : Invoking method 'getFilters' on target object [FilterChainProxy[Filter Chains: null]] or target class [null] with arguments {org.springframework.mock.web.MockHttpServletRequest@729a9c3d}
+2025-05-01T17:13:21.939-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.test.util.ReflectionTestUtils        : Getting field 'securityContextRepository' from target object [org.springframework.security.web.context.SecurityContextHolderFilter@38e00b47] or target class [class org.springframework.security.web.context.SecurityContextHolderFilter]
+2025-05-01T17:13:21.939-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] w.c.HttpSessionSecurityContextRepository : Created HttpSession as SecurityContext is non-default
+2025-05-01T17:13:21.939-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]] to HttpSession [org.springframework.mock.web.MockHttpSession@574327ed]
+2025-05-01T17:13:21.940-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.security.web.FilterChainProxy        : Securing GET /events
+2025-05-01T17:13:21.941-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.security.web.FilterChainProxy        : Secured GET /events
+2025-05-01T17:13:21.942-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : GET &quot;/events&quot;, parameters={}
+2025-05-01T17:13:21.942-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.petevents.peteventsapp.controllers.EventController#getAllEvents()
+2025-05-01T17:13:21.960-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/hal+json', given [*/*] and supported [application/hal+json, application/json, application/*+json]
+2025-05-01T17:13:21.971-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [CollectionModel { content: [EntityModel { content: links: [], links: [&lt;http://localhost/events/1&gt;;re (truncated)...]
+2025-05-01T17:13:21.997-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed 200 OK
+2025-05-01T17:13:21.998-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]]
+2025-05-01T17:13:22.020-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 26, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.021-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 27, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.022-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 28, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.024-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 29, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.026-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 30, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.027-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 31, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.027-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 32, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.028-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 33, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.031-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] .c.s.DirtiesContextTestExecutionListener : After test method: class [EventControllerTest], method [getAllEventsTest], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2025-05-01T17:13:22.034-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 34, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.036-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] DependencyInjectionTestExecutionListener : Performing dependency injection for test class com.petevents.peteventsapp.controllers.EventControllerTest
+2025-05-01T17:13:22.036-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 35, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.038-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 36, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.040-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] sContextBeforeModesTestExecutionListener : Before test method: class [EventControllerTest], method [storeEventTest], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2025-05-01T17:13:22.042-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 37, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.044-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 38, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.045-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 39, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.045-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 40, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.047-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 41, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.048-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 42, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.065-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.test.util.ReflectionTestUtils        : Invoking method 'getFilters' on target object [FilterChainProxy[Filter Chains: null]] or target class [null] with arguments {org.springframework.mock.web.MockHttpServletRequest@31a4db4f}
+2025-05-01T17:13:22.065-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.test.util.ReflectionTestUtils        : Invoking method 'getFilters' on target object [FilterChainProxy[Filter Chains: null]] or target class [null] with arguments {org.springframework.mock.web.MockHttpServletRequest@31a4db4f}
+2025-05-01T17:13:22.067-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.test.util.ReflectionTestUtils        : Getting field 'securityContextRepository' from target object [org.springframework.security.web.context.SecurityContextHolderFilter@38e00b47] or target class [class org.springframework.security.web.context.SecurityContextHolderFilter]
+2025-05-01T17:13:22.067-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] w.c.HttpSessionSecurityContextRepository : Created HttpSession as SecurityContext is non-default
+2025-05-01T17:13:22.067-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]] to HttpSession [org.springframework.mock.web.MockHttpSession@2842ef02]
+2025-05-01T17:13:22.071-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.security.web.FilterChainProxy        : Securing POST /events/store
+2025-05-01T17:13:22.071-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.security.web.FilterChainProxy        : Secured POST /events/store
+2025-05-01T17:13:22.071-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : POST &quot;/events/store&quot;, parameters={}
+2025-05-01T17:13:22.071-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.petevents.peteventsapp.controllers.EventController#store(EventDTO)
+2025-05-01T17:13:22.162-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read &quot;application/json;charset=UTF-8&quot; to [com.petevents.peteventsapp.dto.EventDTO@1f8d42d1]
+2025-05-01T17:13:22.170-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/hal+json', given [*/*] and supported [application/hal+json, application/json, application/*+json]
+2025-05-01T17:13:22.170-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [EntityModel { content: links: [], links: [&lt;http://localhost/events/10&gt;;rel=&quot;self&quot;, &lt;http://localhost (truncated)...]
+2025-05-01T17:13:22.172-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed 200 OK
+2025-05-01T17:13:22.172-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]]
+2025-05-01T17:13:22.174-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 43, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.175-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 44, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.176-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 45, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.178-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 46, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.179-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 47, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.179-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 48, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.180-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 49, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.180-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 50, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.181-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] .c.s.DirtiesContextTestExecutionListener : After test method: class [EventControllerTest], method [storeEventTest], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2025-05-01T17:13:22.186-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 51, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.186-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@299786b1 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 52, missCount = 1, failureCount = 0]
+2025-05-01T17:13:22.186-04:00 DEBUG 15316 --- [peteventsapp] [    Test worker] .c.s.DirtiesContextTestExecutionListener : After test class: class [EventControllerTest], class annotated with @DirtiesContext [false] with mode [null]
+</pre>
+</span>
+</div>
+<div class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\sebas\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.15.11\a38b16385e867f59a641330f0362ebe742788ed8\byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 8.13</a> at 01-05-2025 17:15:16</p>
+</div>
+</div>
+</body>
+</html>
