@@ -6,7 +6,7 @@ services:
       context: .
     ports:
       - "8090:8090"
-    environment:
+    # environment:
       # - SPRING_DATASOURCE_URL=jdbc:oracle:thin:@n72bzhzwyzgte7oh_high?TNS_ADMIN=/Wallet_OZARZE8P1JOTCP4N
       # - SPRING_DATASOURCE_USERNAME=petseventus
       # - SPRING_DATASOURCE_PASSWORD=Pets_eventbd.-6
